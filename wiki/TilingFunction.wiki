@@ -1,11 +1,32 @@
 #Introducing Tiling functions.
 
-= Introduction =
+The following txyc matrix is use in the following tiling function
+<code language="R">
+txyc_matrix = as.matrix(expand.grid(1:500,1:333))
+</code>
+
+
+== Square ==
+
+== Hexagon ==
+To generate the a tiling by hexagons call *TilingHexagon*, 
+<code language="R">
+TilingHexagon <- function(u, txyc_matrix, width, height)
+</code>
+
+u is the parameter controlling the edge length of each hexagon and it follows:
+\text{hex_edge_len} = \frac{\text{height}}{u \times \sqrt{3}}
+
+Example:
+<code language="R">
+t = TilingHexagon(2, txyc_matrix, 500, 333)
+PlotTiling(txyc_matrix, t)
+</code>
 
 
 
-= Details =
 
+== Comments ==
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
