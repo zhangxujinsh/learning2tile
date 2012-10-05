@@ -40,15 +40,33 @@ To generate the a tiling by diamonds call *TilingRectangle*,
 
 *TilingDiamond <- function(u, v, txyc_matrix, width, height)
 
-where u and v controls the number of right and left diagonal lines.
+where u and v controls the number of left and right diagonal lines.
 
 ===Examples===
 <code language="R">
 t = TilingDiamond (1,1, txyc_matrix, 500, 333)
 PlotTiling(txyc_matrix, t)
 </code>
-[http://learning2tile.googlecode.com/svn/wiki/images/rectangle3_2.png]
+[http://learning2tile.googlecode.com/svn/wiki/images/diamond1_1.png]
 
+<code language="R">
+t = TilingDiamond (1,2, txyc_matrix, 500, 333)
+PlotTiling(txyc_matrix, t)
+</code>
+[http://learning2tile.googlecode.com/svn/wiki/images/diamond1_2.png]
+
+
+<code language="R">
+t = TilingDiamond (3,1, txyc_matrix, 500, 333)
+PlotTiling(txyc_matrix, t)
+</code>
+[http://learning2tile.googlecode.com/svn/wiki/images/diamond3_1.png]
+
+<code language="R">
+t = TilingDiamond (5,5, txyc_matrix, 500, 333)
+PlotTiling(txyc_matrix, t)
+</code>
+[http://learning2tile.googlecode.com/svn/wiki/images/diamond5_5.png]
 
 
 == Hexagon ==
