@@ -44,6 +44,7 @@ TilingRectangle <- function(u, v, txyc_matrix, width, height) {
 	region.all$height = height
 	region.all$style = "rectangle"
 	region.all$para = c(u,v)
+	region.all$tiles = list()
 	cnt = 1
 	for(i in 1:(length(widthseq)-1)) {
 		for(j in 1:(length(heightseq)-1)) {
@@ -135,6 +136,7 @@ TilingDiamond <- function(u, v, txyc_matrix, width, height) {
 	region.all$height = height
 	region.all$style = "diamond"
 	region.all$para = c(u,v)
+	region.all$tiles = list()
 	
 	cnt = 1
 	for(i in 1:(nrow(right_lines)-1)) {
@@ -190,6 +192,7 @@ TilingHexagon <- function(u, txyc_matrix, width, height) {
 	region.all$height = height
 	region.all$style = "hexagon"
 	region.all$para = u
+	region.all$tiles = list()
 	
 	cnt = 1
 	for(i in 1:(2*u+1)) {
@@ -233,7 +236,7 @@ TilingCamera <- function(scalepara=0.5, txyc_matrix, width, height) {
 	region.all$height = height
 	region.all$style = "camera"
 	region.all$para = scalepara
-	
+	region.all$tiles = list()
 	
 	region4 = which(f3<1)
 	region0 = setdiff(intersect(which(f1>0),which(f2<0)),region4)
