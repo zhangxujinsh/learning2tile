@@ -17,15 +17,40 @@ TilingHexagon <- function(u, txyc_matrix, width, height)
 u is the parameter controlling the edge length of each hexagon and it follows:
 \text{hex_edge_len} = \frac{\text{height}}{u \times \sqrt{3}}
 
-Example:
+===Examples===
+<code language="R">
+t = TilingHexagon(1, txyc_matrix, 500, 333)
+PlotTiling(txyc_matrix, t)
+</code>
+[http://learning2tile.googlecode.com/svn/wiki/images/hexagon1.png]
+
+<code language="R">
+t = TilingHexagon(1.5, txyc_matrix, 500, 333)
+PlotTiling(txyc_matrix, t)
+</code>
+[http://learning2tile.googlecode.com/svn/wiki/images/hexagon1.5.png]
+
 <code language="R">
 t = TilingHexagon(2, txyc_matrix, 500, 333)
 PlotTiling(txyc_matrix, t)
-
 </code>
 [http://learning2tile.googlecode.com/svn/wiki/images/hexagon2.png]
 
-[http://learning2tile.googlecode.com/svn/wiki/images/hexagon1.5.png]
+<code language="R">
+t = TilingHexagon(5, txyc_matrix, 500, 333)
+PlotTiling(txyc_matrix, t)
+</code>
+[http://learning2tile.googlecode.com/svn/wiki/images/hexagon5.png]
+
+== Camera ==
+To generate the a tiling by hexagons call *TilingCamera*
+<code language="R">
+TilingCamera <- function(scalepara=0.5, txyc_matrix, width, height)
+</code>
+, where scalepara controls the radius of the center ellipse.
+
+
+
 
 == Comments ==
 Add your content here.  Format your content with:
