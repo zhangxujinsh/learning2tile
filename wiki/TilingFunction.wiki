@@ -21,8 +21,9 @@ Example:
 <code language="R">
 t = TilingHexagon(2, txyc_matrix, 500, 333)
 PlotTiling(txyc_matrix, t)
-</code>
 
+</code>
+[http://learning2tile.googlecode.com/svn/wiki/images/hexagon2.png]
 
 
 
