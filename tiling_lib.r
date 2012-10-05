@@ -1,25 +1,9 @@
-library(Matrix)
-library(tseries)
+require(Matrix)
+require(tseries)
 
 #To test the library using the following dense tile
 #txyc_matrix = as.matrix(expand.grid(1:500,1:333))
 
-
-GetTilingRegion <- function(spbow, regionID,dim=4096) {
-	#indexing a region from a spatial BoW using the following ID
-	#indexing:
-	#|--------------
-	#|    |    |    |
-	#| 3  | 6  | 9  |
-	#|--------------
-	#|    |    |    |
-	#| 2  | 5  | 8  |
-	#|--------------
-	#|    |    |    |
-	#| 1  | 4  | 7  |
-	#|--------------
-	return(spbow[((regionID-1)*dim+1):(regionID*dim)])
-}
 
 PlotTiling <- function(txyc_matrix, region.all) {
 	width = region.all$width
