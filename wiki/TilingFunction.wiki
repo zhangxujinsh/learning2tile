@@ -25,7 +25,7 @@ PlotTiling(txyc_matrix, t)
 </code>
 [http://learning2tile.googlecode.com/svn/wiki/images/hexagon2.png]
 
-
+[http://learning2tile.googlecode.com/svn/wiki/images/hexagon1.5.png]
 
 == Comments ==
 Add your content here.  Format your content with:
