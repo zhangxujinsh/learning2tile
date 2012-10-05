@@ -1,23 +1,23 @@
+source("code/tiling_lib.r")
+source("code/bow_lib.r")
+
+resolution <- read.table(paste("data",FILE.SEPERATOR,"frame.info",sep=""))
 
 
-resolution <- read.table("frame.info")
-
-
-FILE.SEPERATOR = "\\"
 dir.create(TARGET_DIR)
 FINAL_BOWDIR = paste(TARGET_DIR,FILE.SEPERATOR,"spbow",FILE.SEPERATOR,sep="")
 dir.create(FINAL_BOWDIR)
 
 
-TILING_STYLE = "square"
-TILING_STYLE_PARA
-experiment.summary <- paste(" EXP_ID",EXP_ID,"\n",
+
+experiment.summary <- paste("EXP_ID",EXP_ID,"\n",
 			    "WORKING_DIR =", WORKING_DIR, "\n",
 			    "TARGET_DIR =", TARGET_DIR, "\n",
 			    "DIM = ", DIM, "\n",
-			    "TILING_PARA =", HORIZIONTAL_GRID, "\n",
-			    "TILING_STYLE =", VERTICAL_GRID, "\n",
-			    "SOFTMEMBERSHIP_PARA =", paste(SOFTMEMBERSHIP_PARA, collapse=" ", sep = " "), "\r\n")
+			    "TILING_STYLE =", TILING_STYLE, "\n",
+			    "TILING_PARA =", paste(TILING_PARA, collapse=" ", sep = " "), "\n",
+			    "SOFTMEMBERSHIP_PARA =", paste(SOFTMEMBERSHIP_PARA, collapse=" ", sep = " "), "\n")
+				
 write(experiment.summary, file=paste(TARGET_DIR,FILE.SEPERATOR,"experiment-summary.txt",sep=""))
 
 
@@ -26,10 +26,27 @@ getVideoID <- function(filename) {
 }
 
 
+
 images.txyc.location <- as.matrix(read.table(WORKING_DIR))
 
+#calculating the dim of the final BOW
+if(TILING_STYLE == "square") {
+	final.bow.dim <- TILING_PARA[1]*TILING_PARA[2]*DIM
+} else if(TILING_STYLE == "Diamond") {
+	final.bow.dim <- (TILING_PARA[1]+1)*(TILING_PARA[2]+1)*DIM
+} else if(TILING_STYLE == "hexagon") {
+	#projecting to the universal screen
 
-for(i in 1:length(images.location)) {
+} else if(TILING_STYLE == "camera") {
+	final.bow.dim <- 5*DIM
+} else {
+	print("Unkown Tiling Style! Please check it again.")
+	quit()
+}
+
+
+
+for(i in 1:length(images.txyc.location)) {
 	#check whether the file has been processed
 	if(file.exists(paste(FINAL_BOWDIR,basename(images.txyc.location[i]),".spbow",sep="")))	next;
 	print(paste("processing ",basename(images.txyc.location[i]), "...", sep=""))
@@ -43,7 +60,7 @@ for(i in 1:length(images.location)) {
 		next;
 	}
 	
-	final.bow <- vector(mode="numeric",length=abs(HORIZIONTAL_GRID) * VERTICAL_GRID * DIM)
+	final.bow <- vector(mode="numeric",length=final.bow.dim)
 	
 	wmatrix = matrix(0,0,0)
 	#check whether the matrix file is empty?
@@ -60,12 +77,9 @@ for(i in 1:length(images.location)) {
 	#adjust the cluster center starting from 1
 	wmatrix[,3:ncol(wmatrix)] = wmatrix[,3:ncol(wmatrix)]+1
 	
-	
-	
-	
 	if(TILING_STYLE == "square") {
-		region.all <- TilingSquare(TILING_PARA[1],TILING_PARA[2], wmatrix, width, height)
-	} else if(TILING_STYLE = "") {
+		region.all <- TilingRectangle(TILING_PARA[1],TILING_PARA[2], wmatrix, width, height)
+	} else if(TILING_STYLE == "") {
 	}
 
 	
