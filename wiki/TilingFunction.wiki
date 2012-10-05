@@ -6,15 +6,38 @@ txyc_matrix = as.matrix(expand.grid(1:500,1:333))
 </code>
 
 
-== Square ==
+== Rectangle ==
+
+To generate the a tiling by rectangle call *TilingRectangle*,
+
+*TilingRectangle <- function(u, v, txyc_matrix, width, height)
+
+where u is the number of rectangle in each row and v is the number in each column.
+
+<code language="R">
+t = TilingRectangle(3,3, txyc_matrix, 500, 333)
+PlotTiling(txyc_matrix, t)
+SaveTilingPlot(txyc_matrix, t, "3x3_rectangle_tiling.png")
+</code>
+[http://learning2tile.googlecode.com/svn/wiki/images/hrectangle3_3.png]
+
+
+<code language="R">
+t = TilingRectangle(3,2, txyc_matrix, 500, 333)
+PlotTiling(txyc_matrix, t)
+SaveTilingPlot(txyc_matrix, t, "3x3_rectangle_tiling.png")
+</code>
+[http://learning2tile.googlecode.com/svn/wiki/images/hrectangle3_2.png]
+
+== Diamond ==
 
 == Hexagon ==
 To generate the a tiling by hexagons call *TilingHexagon*, 
-<code language="R">
-TilingHexagon <- function(u, txyc_matrix, width, height)
-</code>
+
+*TilingHexagon <- function(u, txyc_matrix, width, height)
 
 u is the parameter controlling the edge length of each hexagon and it follows:
+
 \text{hex_edge_len} = \frac{\text{height}}{u \times \sqrt{3}}
 
 ===Examples===
@@ -43,14 +66,32 @@ PlotTiling(txyc_matrix, t)
 [http://learning2tile.googlecode.com/svn/wiki/images/hexagon5.png]
 
 == Camera ==
-To generate the a tiling by hexagons call *TilingCamera*
-<code language="R">
-TilingCamera <- function(scalepara=0.5, txyc_matrix, width, height)
-</code>
+To generate the a tiling of camera style call *TilingCamera*
+
+*TilingCamera <- function(scalepara=0.5, txyc_matrix, width, height)
+
 , where scalepara controls the radius of the center ellipse.
 
+===Examples===
+
+<code language="R">
+t = TilingCamera(0.1, txyc_matrix, 500, 333)
+PlotTiling(txyc_matrix, t)
+</code>
+[http://learning2tile.googlecode.com/svn/wiki/images/camera0.1.png]
+
+<code language="R">
+t = TilingCamera(0.3, txyc_matrix, 500, 333)
+PlotTiling(txyc_matrix, t)
+</code>
+[http://learning2tile.googlecode.com/svn/wiki/images/camera0.3.png]
 
 
+<code language="R">
+t = TilingCamera(0.5, txyc_matrix, 500, 333)
+PlotTiling(txyc_matrix, t)
+</code>
+[http://learning2tile.googlecode.com/svn/wiki/images/camera0.5.png]
 
 == Comments ==
 Add your content here.  Format your content with:
