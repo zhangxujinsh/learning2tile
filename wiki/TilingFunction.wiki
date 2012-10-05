@@ -19,7 +19,7 @@ t = TilingRectangle(3,3, txyc_matrix, 500, 333)
 PlotTiling(txyc_matrix, t)
 SaveTilingPlot(txyc_matrix, t, "3x3_rectangle_tiling.png")
 </code>
-[http://learning2tile.googlecode.com/svn/wiki/images/hrectangle3_3.png]
+[http://learning2tile.googlecode.com/svn/wiki/images/rectangle3_3.png]
 
 
 <code language="R">
@@ -27,7 +27,7 @@ t = TilingRectangle(3,2, txyc_matrix, 500, 333)
 PlotTiling(txyc_matrix, t)
 SaveTilingPlot(txyc_matrix, t, "3x3_rectangle_tiling.png")
 </code>
-[http://learning2tile.googlecode.com/svn/wiki/images/hrectangle3_2.png]
+[http://learning2tile.googlecode.com/svn/wiki/images/rectangle3_2.png]
 
 == Diamond ==
 
