@@ -26,7 +26,7 @@ For the 2x2 rectangle tiling with tiling parameter equaling c(2,2) the following
 || (0,1,2,2) ||
 || (0,1,2,3) ||
 
-||*Equal Tiling*||
+|| *Equal Tiling* ||
 ||(0,0,1,1)||
 ||(0,1,0,1)||
 ||(0,1,2,3)||
