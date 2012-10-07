@@ -26,10 +26,7 @@ For the 2x2 rectangle tiling with tiling parameter equaling c(2,2) the following
 || (0,1,2,2) ||
 || (0,1,2,3) ||
 
-|| *Equal Tiling* ||
-||(0,0,1,1)||
-||(0,1,0,1)||
-||(0,1,2,3)||
+
 
 
 To generate a tiling with a specific membership use the following code:
@@ -67,6 +64,12 @@ We will get the following figure:
 
 
 == Tiling Membership Generation ==
+|| *Equal Tiling* ||
+||(0,0,1,1)||
+||(0,1,0,1)||
+||(0,1,2,3)||
+
+
 
 
 ------
