@@ -28,6 +28,13 @@ For the 2x2 rectangle tiling with tiling parameter equaling c(2,2) the following
 
 To generate a tiling with a specific membership use the following code:
 
+<code language="R">
+txyc_matrix = as.matrix(expand.grid(1:500,1:333))
+base_tiling = TilingRectangle(2,2, txyc_matrix, 500, 333) #generate the base tiling
+tiling_membership = c(0, 1, 2, 0)
+mytiling = TilingMembership(base_tiling)
+PlotTiling(txyc_matrix, mytiling)
+</code>
 
 
 ------
