@@ -36,7 +36,7 @@ mytiling = TilingMembership(base_tiling, tiling_membership )
 PlotTiling(txyc_matrix, mytiling)
 </code>
 The following tiling would be displayed:
-[]
+[http://learning2tile.googlecode.com/svn/wiki/images/(0,1,2,0).png]
 
 Let's try another example, in the context of the rectangle tiling with parameter 3x3, let's try to generate a tiling that has 3 row and 1 column (with parameter 3x1) by picking a suitable tiling membership parameter.
 <code language="R">
@@ -46,6 +46,8 @@ tiling_membership = c(0,0,0,1,1,1,2,2,2)
 mytiling = TilingMembership(base_tiling, tiling_membership )
 PlotTiling(txyc_matrix, mytiling)
 </code>
+We will get the following figure:
+[http://learning2tile.googlecode.com/svn/wiki/images/(0,0,0,1,1,1,2,2,2).png]
 
 
 Among those tiling 
