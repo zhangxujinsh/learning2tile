@@ -36,6 +36,19 @@ mytiling = TilingMembership(base_tiling, tiling_membership )
 PlotTiling(txyc_matrix, mytiling)
 </code>
 
+You will get the following tiling:
+[]
+
+Among those tiling 
+
+
+
+== Tiles IDs ==
+
+
+
+== Tiling Membership Generation ==
+
 
 ------
 == Soft Membership ==
