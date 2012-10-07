@@ -24,6 +24,29 @@ SoftMembership <- function(txyc_matrix, para = c(1,0,0,0,0,0,0,0,0,0), dim=4096)
 }
 
 
+GenSpbow <- function(txyc_matrix, region.all, norm= c("l1", "l2", "none"), para = c(1,0,0,0,0,0,0,0,0,0), dim = 4096) {
+	file.bow <- vector(mode="numeric",length=0)
+	for(k in 1:length(region.all$tiles)) {
+		if(length(region.all$tiles[[k]])==0) {
+			this.bow <- replicate(dim,0)
+		} else {
+			this.bow <- SoftMembership(txyc_matrix[region.all$tiles[[k]],], para, dim)
+			if(norm == "l1")
+				this.bow <- L1normalize(this.bow)
+			else if(norm == "l2") {
+				this.bow <- L2normalize(this.bow)
+			} 
+		}
+		file.bow <- c(file.bow, this.bow)
+	}
+	return(file.bow)
+}
+
+
+
+
+
+
 L1normalize <- function(row_vector) {
 	divider = sum(row_vector)
 	if(divider == 0) {
@@ -60,31 +83,4 @@ GetTilingRegion <- function(spbow, regionID,dim=4096) {
 	#| 1  | 4  | 7  |
 	#|--------------
 	return(spbow[((regionID-1)*dim+1):(regionID*dim)])
-}
-
-GenSpbow <- function(spbow, region.all, norm= c("l1", "l2", "none"), dim = 4096) {
-	#!!!!not tested!!!!
-	#generate the spatial bag of word of the given tiling
-	#norm controls whether to normalize the result vector
-	N = max(region.all$tiles)+1
-	result <- vector(mode="numeric",N*dim)
-	for(i in 1:N) {
-		for(j in 1:length(tiling)) {
-			if(i == (tiling[j]+1)) {
-				result[((i-1)*dim+1):(i*dim)] = result[((i-1)*dim+1):(i*dim)] + getRegion(spbow,j,dim)
-			}
-		}
-	}
-	if(norm) {
-		for(i in 1:N) {
-			this.sum = sum(result[((i-1)*dim+1)])
-			if(this.sum != 0) {
-				result[((i-1)*dim+1):(i*dim)] = result[((i-1)*dim+1):(i*dim)]/sum(result[((i-1)*dim+1):(i*dim)])/N
-			}
-			else {
-				result[((i-1)*dim+1):(i*dim)] = replicate(dim,0)
-			}
-		}
-	}
-	return(result)
 }
