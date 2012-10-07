@@ -9,8 +9,7 @@ The *integer* in each dimension indicates the membership of the current tiles. I
 The *unique* number of the integers in the vector denotes the number of total tiles after the membership mapping.
 
 === Examples ===
-
-
+For the 
 
 
 
