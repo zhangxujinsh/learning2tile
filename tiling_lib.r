@@ -272,7 +272,7 @@ TilingMembership <- function(region.all, membership_vector) {
 
 
 
-Project2UniformSize <- function(txyc_matrix, owidth, oheight, pwidth = 500, pheight = 333) {
+Project2AUniformSize <- function(txyc_matrix, owidth, oheight, pwidth = 500, pheight = 333) {
 	#project the txyc of any keyframe to an predefined uniform keyframe.
 	widthscale <- pwidth/owidth
 	heightscale <- pheight/oheight
