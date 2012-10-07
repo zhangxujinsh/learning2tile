@@ -32,7 +32,7 @@ images.txyc.location <- as.matrix(read.table(WORKING_DIR))
 #calculating the dim of the final BOW
 if(TILING_STYLE == "square") {
 	final.bow.dim <- TILING_PARA[1]*TILING_PARA[2]*DIM
-} else if(TILING_STYLE == "Diamond") {
+} else if(TILING_STYLE == "diamond") {
 	final.bow.dim <- (TILING_PARA[1]+1)*(TILING_PARA[2]+1)*DIM
 } else if(TILING_STYLE == "hexagon") {
 	#projecting to the universal screen
@@ -62,38 +62,35 @@ for(i in 1:length(images.txyc.location)) {
 	
 	final.bow <- vector(mode="numeric",length=final.bow.dim)
 	
-	wmatrix = matrix(0,0,0)
+	txyc_matrix = matrix(0,0,0)
 	#check whether the matrix file is empty?
 	if(file.info(images.txyc.location[i])$size <= 0)  {
 		write(final.bow, file=paste(FINAL_BOWDIR,basename(videos.dirs[i]),".spbow",sep=""), ncol=length(final.bow))
 		next		#empty file
 	}
-	wmatrix <- read.matrix(images.txyc.location[i])
-	if(nrow(wmatrix) == 0) {
+	txyc_matrix <- read.matrix(images.txyc.location[i])
+	if(nrow(txyc_matrix) == 0) {
 		write(final.bow, file=paste(FINAL_BOWDIR,basename(videos.dirs[i]),".spbow",sep=""), ncol=length(final.bow))
 		next									#empty matrix
 	}
 	
 	#adjust the cluster center starting from 1
-	wmatrix[,3:ncol(wmatrix)] = wmatrix[,3:ncol(wmatrix)]+1
+	txyc_matrix[,3:ncol(txyc_matrix)] = txyc_matrix[,3:ncol(txyc_matrix)]+1
 	
 	if(TILING_STYLE == "square") {
-		region.all <- TilingRectangle(TILING_PARA[1],TILING_PARA[2], wmatrix, width, height)
-	} else if(TILING_STYLE == "") {
+		region.all <- TilingRectangle(TILING_PARA[1],TILING_PARA[2], txyc_matrix, width, height)
+	} else if(TILING_STYLE == "diamond") {
+		region.all <- TilingDiamond(TILING_PARA[1],TILING_PARA[2], txyc_matrix, width, height)
+	} else if(TILING_STYLE == "camera") {
+		region.all <- TilingCamera(TILING_PARA, txyc_matrix, width, height)
+	} else if(TILING_STYLE == "hexagon") {
+		
+	
 	}
 
 	
-	#generate bow for each region
-	file.bow <- vector(mode="numeric",length=0)
-	for(k in 1:length(region.all$tiles)) {
-		if(length(region.all$tiles[[k]])==0) {
-			this.bow <- replicate(DIM,0)
-		} else {
-			this.bow <- SoftMembership(wmatrix[region.all$tiles[[k]],], para= SOFTMEMBERSHIP_PARA, dim=DIM)
-			this.bow <- L1normalize(this.bow)
-		}
-		file.bow <- c(file.bow, this.bow)
-	}
+	file.bow = GenSpbow(txyc_matrix, region.all, "l1", SOFTMEMBERSHIP_PARA, DIM)
+	
 	
 	#normalize
 	file.bow = file.bow/length(region.all$tiles)

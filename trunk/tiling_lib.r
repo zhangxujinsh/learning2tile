@@ -252,13 +252,36 @@ TilingCamera <- function(scalepara=0.5, txyc_matrix, width, height) {
 }
 
 
+TilingMembership <- function(region.all, membership_vector) {
+	n = max(membership_vector)
+	result = region.all
+	result$membership = membership_vector
+	result$tiles = list()	
+	
+	for(i in 0:n) {
+		#for each tile member
+		tile.member.indexes = which(membership_vector==i)
+		thisvector= vector(mode="numeric",length=0)
+		for(j in tile.member.indexes) {
+			 thisvector = union(thisvector, region.all$tiles[[j]])
+		}
+		result$tiles[[(i+1)]] <- thisvector
+	}
+	return(result)
+}
 
-Project2UniformSize <- function(txyc, owidth, oheight, pwidth = 500, pheight = 333) {
+
+
+Project2UniformSize <- function(txyc_matrix, owidth, oheight, pwidth = 500, pheight = 333) {
 	#project the txyc of any keyframe to an predefined uniform keyframe.
 	widthscale <- pwidth/owidth
 	heightscale <- pheight/oheight
-	result <- txyc
-	result[,1] = round(txyc[,1] * widthscale) #projected width
-	result[,2] = round(txyc[,2] * heightscale) #projected height
+	result <- txyc_matrix
+	result[,1] = round(txyc_matrix[,1] * widthscale) #projected width
+	result[,2] = round(txyc_matrix[,2] * heightscale) #projected height
 	return(result)
 }
+
+
+
+
