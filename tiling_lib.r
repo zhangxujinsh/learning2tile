@@ -180,6 +180,50 @@ Hexfun <- function(x, y, l) {
 }
 
 
+TilingHexagonFocus <- function(u, txyc_matrix, width, height) {
+	#insect eyes
+	m <- txyc_matrix	
+	#calculating the hexagon height
+	hex_edge_len <- ceiling(height/(u*sqrt(3)))
+	
+	#finding the left coner (relative origin) for all hexagons
+	region.all = list()
+	region.all$width = width
+	region.all$height = height
+	region.all$style = "hexagon"
+	region.all$para = u
+	region.all$tiles = list()
+	
+	cnt = 1
+	for(i in 2:(2*u)) {
+		j = 1
+		cur_x = 0
+		cur_y = hex_edge_len*i*sqrt(3)/2
+		while(TRUE) {
+			if(i%%2 != 0) {
+				#odd
+				cur_x = (3*j-3/2) * hex_edge_len
+			} else {
+				#even
+				cur_x =  (3*j-3) * hex_edge_len
+			}
+			if(cur_x > (width-hex_edge_len)) break
+			lfun = Hexfun(cur_x,cur_y,hex_edge_len)
+			region1 = which(lfun[1,1]*m[,1]+lfun[1,2] >= m[,2])
+			region2 = which(lfun[2,1]*m[,1]+lfun[2,2] >= m[,2])
+			region3 = which(lfun[3,1]*m[,1]+lfun[3,2] > m[,2])
+			region4 = which(lfun[4,1]*m[,1]+lfun[4,2] < m[,2])
+			region5 = which(lfun[5,1]*m[,1]+lfun[5,2] < m[,2])
+			region6 = which(lfun[6,1]*m[,1]+lfun[6,2] <= m[,2])
+			region = intersect(intersect(intersect(intersect(intersect(region1,region2),region3),region4),region5),region6)
+			region.all$tiles[[cnt]] <- region
+			cnt = cnt + 1
+			j = j + 1
+		}
+	}
+	return(region.all)
+}
+
 TilingHexagon <- function(u, txyc_matrix, width, height) {
 	#insect eyes
 	m <- txyc_matrix	
