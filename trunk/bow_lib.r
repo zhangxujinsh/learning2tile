@@ -44,6 +44,29 @@ GenSpbow <- function(txyc_matrix, region.all, norm= c("l1", "l2", "none"), para 
 
 
 
+TransformSpbow <- function(spbow, tiling_membership, norm = c("l1", "l2", "none"), dim = 4096) {
+	#note the input spbow should not be normalized
+	
+	N = max(tiling_membership)+1
+	result <- vector(mode="numeric", N*dim)
+	
+	for(i in 1:N) {
+		normdivider <- length(which(tiling_membership==(i-1)))
+		for(j in 1:length(tiling_membership)) {
+			if(i == (tiling_membership[j]+1)) {
+				result[((i-1)*dim+1):(i*dim)] = result[((i-1)*dim+1):(i*dim)] + GetTilingRegion(spbow,j,dim)
+			}
+		}
+		if(norm == "l1") {
+				result[((i-1)*dim+1):(i*dim)] <- L1normalize(result[((i-1)*dim+1):(i*dim)])/N
+		}	else if(norm == "l2") {
+				result[((i-1)*dim+1):(i*dim)] <- L2normalize(result[((i-1)*dim+1):(i*dim)])/N
+		} 
+		
+	}
+	return(result)
+}
+
 
 
 
