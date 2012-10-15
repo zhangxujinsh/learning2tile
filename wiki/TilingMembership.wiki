@@ -55,19 +55,6 @@ We will get the following figure:
 [http://learning2tile.googlecode.com/svn/wiki/images/(0,0,0,1,1,1,2,2,2).png]
 
 
- 
-
-
-
-== Tiles IDs ==
-
-
-
-== Tiling Membership Generation ==
-|| *Equal Tiling* ||
-||(0,0,1,1)||
-||(0,1,0,1)||
-||(0,1,2,3)||
 
 
 
