@@ -2,11 +2,9 @@ require(Matrix)
 require(tseries)
 
 
-RandomSplit(labelfile, ncopy = 10) {
+RandomSplitBackup <- function(labelfile, ncopy = 10) {
 	d =as.vector(read.table(labelfile))
-
 	classes = unique(d[,2])
-	
 	for(i in 1:ncopy) {
 		result =  replicate(nrow(d),-1)
 		#sample each class
@@ -21,6 +19,47 @@ RandomSplit(labelfile, ncopy = 10) {
 		partation[,2] = result
 		write(t(partation), file = paste("partation",i,".par",sep=""), ncol = 2)
 	}
+}
+
+
+RandomSplit <- function(labelfile, ncopy = 10) {
+	d = as.vector(read.table(labelfile))
+	labs <- list()
+	classes <- c()
+	for(i in 1:nrow(d)) {
+		labs[[i]] = unassemble(as.character(d[i,2]))
+		classes = union(classes, labs[[i]])
+	}
+	#to binary matrix
 	
 	
+	classes = sort(unique(classes))
+	
+	bin_matrix <- matrix(0, nrow = nrow(d), ncol = length(classes))
+	for(i in 1:nrow(d)) {
+		for(j in labs[[i]]) {
+			bin_matrix[i,j]=1
+		}
+	}
+	
+	
+	for(i in 1:ncopy) {
+		result =  replicate(nrow(d),-1)
+		#sample each class
+		for(j in classes) {
+			population = which(bin_matrix[,j]==1)
+			trids <- population[sample(1:length(population), ceiling(length(population)/2))]
+			tsids <- setdiff(population,trids)
+			result[trids] = 0
+			result[tsids] = 1
+		}
+		partation = d
+		partation[,2] = result
+		write(t(partation), file = paste("partation",i,".par",sep=""), ncol = 2)
+	}
+}
+
+
+unassemble <- function(str.label) {
+	return(as.numeric(strsplit(str.label,",")[[1]]))
 }
