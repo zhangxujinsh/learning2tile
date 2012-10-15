@@ -17,6 +17,41 @@ PlotTiling <- function(txyc_matrix, region.all) {
 	}
 }
 
+TilingMembership2String <- function(tiling_membership) {
+	#the input is a vector of tiling membership
+	#the output is a string representation of of the input
+	result <- ""
+	for(i in 1:(length(tiling_membership)-1)) {
+		result <- paste(result, tiling_membership[i], "_", sep ="")
+	}
+	result <- paste(result, tiling_membership[length(tiling_membership)], sep="")
+	return(result)
+}
+
+String2TilingMembership <- function(s) {
+	return(as.numeric(strsplit(s,"_")[[1]]))
+}
+
+GenTilingReport <- function(tiling_matrix, fitness) {
+	numtiles = apply(tiling_matrix,1,max)+1		#number of the tiles
+	report = matrix(nrow = length(unique(numtiles)), ncol = 3)
+	
+	cnt = 1
+	for(i in unique(numtiles)) {
+		this.level.ids <- which(numtiles == i)
+		best.id <- which(fitness[this.level.ids] == max(fitness[this.level.ids]))[1]
+		best.id <- this.level.ids[best.id]
+		report[cnt,2] = fitness[best.id]
+		report[cnt,3] = i
+		report[cnt,1] = TilingMembership2String(tiling_matrix[best.id,])
+		cnt = cnt + 1
+	}
+	colnames(report) <-  c("tiling", "fitness", "num_of_tiles")
+	return(report)
+}
+
+	
+
 
 SaveTilingPlot <- function(txyc_matrix, region.all, save_location) {
 	width = region.all$width
