@@ -12,8 +12,12 @@ The following figure would be displayed to save the figure using
 SaveTilingPlot(txyc_matrix, base_tiling, plot.id = TRUE, "4x4_rectangle_id.png")
 </code>
 We list the ID for all base screens:
-|| *Base screen* || *Tile ID* ||
-|| rectangle|| [http://learning2tile.googlecode.com/svn/wiki/images/4x4_rectangle_id.png]||
+|| *Base screen* || *Tile ID* || ||
+|| rectangle|| [http://learning2tile.googlecode.com/svn/wiki/images/4x4_rectangle_id.png] || <code language="R">
+txyc_matrix = as.matrix(expand.grid(1:500,1:333))
+base_tiling = TilingRectangle(4,4, txyc_matrix, 500, 333) #generate the base screen
+PlotTiling(txyc_matrix, base_tiling, plot.id = TRUE)
+</code>||
 || diamond|| ||
 || hexagon|| ||
 || ellipse || ||
