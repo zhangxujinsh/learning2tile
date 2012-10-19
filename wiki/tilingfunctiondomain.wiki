@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#Introducing how to enumerate all tiling functions for the given base screen
 
 == Domain of the tiling functions ==
 
