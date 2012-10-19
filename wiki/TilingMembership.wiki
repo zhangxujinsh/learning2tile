@@ -8,22 +8,6 @@ The *integer* in each dimension indicates the membership of the current tiles. I
 
 
 === Examples ===
-For the 2x2 rectangle tiling with tiling parameter equaling c(2,2) the following is the all possible hard tiling membership:
-|| *Set Partition* ||
-|| (0,0,0,1) ||
-|| (0,0,1,0) ||
-|| (0,0,1,1) ||
-|| (0,0,1,2) ||
-|| (0,1,0,0) ||
-|| (0,1,0,1) ||
-|| (0,1,0,2) ||
-|| (0,1,1,0) ||
-|| (0,1,1,1) ||
-|| (0,1,1,2) ||
-|| (0,1,2,0) ||
-|| (0,1,2,1) ||
-|| (0,1,2,2) ||
-|| (0,1,2,3) ||
 
 
 
@@ -54,6 +38,22 @@ We will get the following figure:
 [http://learning2tile.googlecode.com/svn/wiki/images/(0,0,0,1,1,1,2,2,2).png]
 
 
+For the 2x2 rectangle tiling with tiling parameter equaling c(2,2) the following is the all possible hard tiling membership:
+|| *Set Partition* ||
+|| (0,0,0,1) ||
+|| (0,0,1,0) ||
+|| (0,0,1,1) ||
+|| (0,0,1,2) ||
+|| (0,1,0,0) ||
+|| (0,1,0,1) ||
+|| (0,1,0,2) ||
+|| (0,1,1,0) ||
+|| (0,1,1,1) ||
+|| (0,1,1,2) ||
+|| (0,1,2,0) ||
+|| (0,1,2,1) ||
+|| (0,1,2,2) ||
+|| (0,1,2,3) ||
 
 
 
