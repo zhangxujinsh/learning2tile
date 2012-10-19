@@ -5,7 +5,7 @@ require(tseries)
 #txyc_matrix = as.matrix(expand.grid(1:500,1:333))
 
 
-PlotTiling <- function(txyc_matrix, region.all) {
+PlotTiling <- function(txyc_matrix, region.all, plot.id = FALSE) {
 	width = region.all$width
 	height = region.all$height
 	windows.options(width=width, height=height)
@@ -15,7 +15,16 @@ PlotTiling <- function(txyc_matrix, region.all) {
 	for( i in 1:length(region.all$tiles)) {
 		lines(txyc_matrix[region.all$tiles[[i]],1:2],type = "p",pch=20,col = colors[i])
 	}
+	if(plot.id) {
+		for(i in 1:length(region.all$tiles)) {
+			meanx = mean(txyc_matrix[region.all$tiles[[i]],1])
+			meany = mean(txyc_matrix[region.all$tiles[[i]],2])
+			text(meanx,meany,labels=(i-1), cex=3)
+		}
+	}
 }
+
+
 
 TilingMembership2String <- function(tiling_membership) {
 	#the input is a vector of tiling membership
@@ -53,7 +62,7 @@ GenTilingReport <- function(tiling_matrix, fitness) {
 	
 
 
-SaveTilingPlot <- function(txyc_matrix, region.all, save_location) {
+SaveTilingPlot <- function(txyc_matrix, region.all, plot.id = FALSE, save_location) {
 	width = region.all$width
 	height = region.all$height
 	
@@ -64,6 +73,14 @@ SaveTilingPlot <- function(txyc_matrix, region.all, save_location) {
 	
 	for(i in 1:length(region.all$tiles)) {
 		lines(txyc_matrix[region.all$tiles[[i]],1:2],type = "p",pch=1,col = colors[i])
+	}
+	
+	if(plot.id) {
+		for(i in 1:length(region.all$tiles)) {
+			meanx = mean(txyc_matrix[region.all$tiles[[i]],1])
+			meany = mean(txyc_matrix[region.all$tiles[[i]],2])
+			text(meanx,meany,labels=(i-1), cex=3)
+		}
 	}
 	dev.off()
 }
@@ -126,7 +143,7 @@ TilingDiamond <- function(u, v, txyc_matrix, width, height) {
 	cnt = 1
 	while(i < u+2) {
 		right_lines[i,1] = -1*height/width
-		right_lines[i,2] = height*((u_intersec_pots+1)/u_intersec_pots)*cnt
+		right_lines[i,2] = height+ height/u_intersec_pots*cnt
 		i = i + 1
 		cnt = cnt + 1
 	}
@@ -162,8 +179,24 @@ TilingDiamond <- function(u, v, txyc_matrix, width, height) {
 	left_lines[v+2,1] = height/width		#k
 	left_lines[v+2,2] = height				#b
 	
-	right_lines
-	left_lines
+	#sort
+	left_lines = left_lines[sort(left_lines[,2],index.return=TRUE)$ix,]
+	right_lines = right_lines[sort(right_lines[,2],index.return=TRUE)$ix,]
+	
+	#creat a sceleton
+	#less efficient implementation to be improved
+	indexcnt = 1
+	skeleton = matrix(0,nrow=(u+1)*height+(v+1)*width,ncol=2)
+	widthseq = floor(seq.int(1,width,length.out=u+1))
+	heightseq = floor(seq.int(1,height,length.out=v+1))
+	for(i in widthseq) {
+		skeleton[indexcnt:(indexcnt+height-1),] = cbind(replicate(height,i),1:height)
+		indexcnt = indexcnt + height
+	}
+	for(i in heightseq) {
+		skeleton[indexcnt:(indexcnt+width-1),] = cbind(1:width, replicate(width,i))
+		indexcnt = indexcnt + width
+	}
 	
 	
 	region.all = list()
@@ -173,9 +206,22 @@ TilingDiamond <- function(u, v, txyc_matrix, width, height) {
 	region.all$para = c(u,v)
 	region.all$tiles = list()
 	
+	
+	
+	
 	cnt = 1
 	for(i in 1:(nrow(right_lines)-1)) {
 		for(j in 1:(nrow(left_lines)-1)) {
+			#test on sceleton
+			{
+				region0 = which(right_lines[i,1]*skeleton[,1]+right_lines[i,2] - skeleton[,2] < 0)
+				region1 = which(right_lines[i+1,1]*skeleton[,1]+right_lines[i+1,2] - skeleton[,2] >= 0)
+				region2 = which(left_lines[j,1]*skeleton[,1]+left_lines[j,2] -skeleton[,2] < 0)
+				region3 = which(left_lines[j+1,1]*skeleton[,1]+left_lines[j+1,2] -skeleton[,2] >= 0)
+				region = intersect(intersect(intersect(region0,region1),region2),region3)
+				if(length(region)==0) next
+			}
+			
 			region0 = which(right_lines[i,1]*m[,1]+right_lines[i,2] - m[,2] < 0)
 			region1 = which(right_lines[i+1,1]*m[,1]+right_lines[i+1,2] - m[,2] >= 0)
 			region2 = which(left_lines[j,1]*m[,1]+left_lines[j,2] -m[,2] < 0)
