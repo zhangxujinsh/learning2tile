@@ -5,11 +5,11 @@ Each tile in the base screen has an unique integer ID starting from 0. Different
 <code language="R">
 txyc_matrix = as.matrix(expand.grid(1:500,1:333))
 base_tiling = TilingRectangle(4,4, txyc_matrix, 500, 333) #generate the base screen
-PlotTiling(txyc_matrix, mytiling, plot.id = TRUE)
+PlotTiling(txyc_matrix, base_tiling, plot.id = TRUE)
 </code>
 The following figure would be displayed to save the figure using
 <code language="R">
-SaveTilingPlot(txyc_matrix, mytiling, plot.id = TRUE, "4x4_rectangle_id.png")
+SaveTilingPlot(txyc_matrix, base_tiling, plot.id = TRUE, "4x4_rectangle_id.png")
 </code>
 
 
