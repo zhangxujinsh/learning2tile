@@ -5,9 +5,9 @@
 ||*Tiling Style*||*Parameters*||*#Partition*||*#Tiling Functions*||*#Equal Tiling*||
 ||rectangle||(2,2)|| 15 ([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_2x2_partition.txt download])||12 ([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_2x2_tiling_fnctions.txt download])||4 ([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_2x2_equal_tiling.txt download])||
 ||rectangle||(3,3)|| 21147([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_3x3_partition.txt download])|| 1434 ([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_3x3_tiling_fnctions.txt download])|| 12 ([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_3x3_equal_tiling.txt download])||
-||rectangle||(3,4)|| 4213597|| 27780|| 78 ||
-||rectangle||(4,3)|| 4213597|| 27780|| 78 ||
-||rectangle||(4,4)|| 10480142147 || 1691690 || 225||
+||rectangle||(3,4)|| 4213597|| 27780([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_3x4_tiling_fnctions.txt download])|| 78 ([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_3x4_equal_tiling.txt download])||
+||rectangle||(4,3)|| 4213597|| 27780([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_4x3_tiling_fnctions.txt download])|| 78 ([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_4x3_equal_tiling.txt download])||
+||rectangle||(4,4)|| 10480142147 || 1691690([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_4x4_tiling_fnctions.txt download]) || 225([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_4x4_equal_tiling.txt download])||
 ||diamond||(1,1)|| x|| x|| x||
 
 
