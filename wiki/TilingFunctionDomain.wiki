@@ -1,22 +1,5 @@
 #Introducing the domain of the tiling functions
 
-For the 2x2 rectangle tiling with tiling parameter equaling c(2,2) the following is the all possible hard tiling membership:
-|| *Set Partition* ||
-|| (0,0,0,1) ||
-|| (0,0,1,0) ||
-|| (0,0,1,1) ||
-|| (0,0,1,2) ||
-|| (0,1,0,0) ||
-|| (0,1,0,1) ||
-|| (0,1,0,2) ||
-|| (0,1,1,0) ||
-|| (0,1,1,1) ||
-|| (0,1,1,2) ||
-|| (0,1,2,0) ||
-|| (0,1,2,1) ||
-|| (0,1,2,2) ||
-|| (0,1,2,3) ||
-
 
 ||*Tiling Style*||*Parameters*||*#Partition*||*#Tiling Functions*||*#Equal Tiling*||
 ||rectangle||(2,2)|| 15 ([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_2x2_partition.txt download])||12 ([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_2x2_tiling_fnctions.txt download])||4 ([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_2x2_equal_tiling.txt download])||
