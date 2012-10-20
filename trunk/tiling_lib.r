@@ -377,6 +377,44 @@ TilingCamera <- function(scalepara=0.5, txyc_matrix, width, height) {
 }
 
 
+TilingEllipse <- function(u=5, txyc_matrix, width, height) {
+	m <- txyc_matrix
+	pre.area = width*height/(u+4)
+	ellipse.para <- vector(mode="numeric",length=u)
+	
+	for(i in 1:u) {
+		ellipse.para[i] = sqrt(pre.area/pi*height/width*i)
+	}
+	
+	ellipse.area <- list()
+	
+	f1 = m[,2]-(height/width)*m[,1]
+	f2 = m[,2]+(height/width)*m[,1]-height
+	for(i in 1:u) {
+		ellipse.area[[i]] = which((m[,1]-width/2)^2/(ellipse.para[i]*width/height)^2 + (m[,2]-height/2)^2/(ellipse.para[i])^2<1)
+	}
+
+	
+	region.all = list()
+	region.all$width = width
+	region.all$height = height
+	region.all$style = "camera"
+	region.all$para = u
+	region.all$tiles = list()
+	
+	
+	region.all$tiles[[1]] <- ellipse.area[[1]]
+	for(i in 2:u) {
+		region.all$tiles[[i]] <- setdiff(ellipse.area[[i]], ellipse.area[[i-1]])
+	}
+	region.all$tiles[[u+1]] <- setdiff(intersect(which(f1>0),which(f2<0)),ellipse.area[[u]])
+	region.all$tiles[[u+2]] <- setdiff(intersect(which(f1>0),which(f2>0)),ellipse.area[[u]])
+	region.all$tiles[[u+3]] <- setdiff(intersect(which(f1<0),which(f2>0)),ellipse.area[[u]])
+	region.all$tiles[[u+4]] <- setdiff(intersect(which(f1<0),which(f2<0)),ellipse.area[[u]])
+	return(region.all)
+}
+
+
 TilingMembership <- function(region.all, membership_vector) {
 	n = max(membership_vector)
 	result = region.all
