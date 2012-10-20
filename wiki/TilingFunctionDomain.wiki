@@ -1,6 +1,6 @@
 #Introducing the domain of the tiling functions
 
-[http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_2x2_partition.txt]
+[http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_2x2_partition.txt download]
 
 ||*Tiling Style*||*Parameters*||*#Partition*||*#Tiling Functions*||*#Equal Tiling*||
 ||rectangle||(2,2)|| 15 ()||
