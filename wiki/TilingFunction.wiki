@@ -103,33 +103,33 @@ PlotTiling(txyc_matrix, t)
 </code>
 [http://learning2tile.googlecode.com/svn/wiki/images/hexagon5.png]
 
-== Camera ==
-To generate the a tiling of camera style call *TilingCamera*
+== Ellipse ==
+To generate the a tiling of camera style call *TilingEllipse*
 
-*TilingCamera <- function(scalepara=0.5, txyc_matrix, width, height)
+*TilingEllipse <- function(u=5, txyc_matrix, width, height)
 
-, where scalepara controls the radius of the center ellipse.
+, where u controls the number of ellipse in the center.
 
 ===Examples===
 
 <code language="R">
-t = TilingCamera(0.1, txyc_matrix, 500, 333)
+t = TilingEllipse(2, txyc_matrix, 500, 333)
 PlotTiling(txyc_matrix, t)
 </code>
-[http://learning2tile.googlecode.com/svn/wiki/images/camera0.1.png]
+[http://learning2tile.googlecode.com/svn/wiki/images/2_ellipse.png]
 
 <code language="R">
-t = TilingCamera(0.3, txyc_matrix, 500, 333)
+t = TilingCamera(5, txyc_matrix, 500, 333)
 PlotTiling(txyc_matrix, t)
 </code>
-[http://learning2tile.googlecode.com/svn/wiki/images/camera0.3.png]
+[http://learning2tile.googlecode.com/svn/wiki/images/5_ellipse.png]
 
 
 <code language="R">
-t = TilingCamera(0.5, txyc_matrix, 500, 333)
+t = TilingCamera(7, txyc_matrix, 500, 333)
 PlotTiling(txyc_matrix, t)
 </code>
-[http://learning2tile.googlecode.com/svn/wiki/images/camera0.5.png]
+[http://learning2tile.googlecode.com/svn/wiki/images/7_ellipse.png]
 
 == Comments ==
 Add your content here.  Format your content with:
