@@ -8,9 +8,9 @@
 ||rectangle||(4,3)|| 4213597|| 27780([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_4x3_tiling_fnctions.txt download])|| 78 ([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_4x3_equal_tiling.txt download])||
 ||rectangle||(4,4)|| 10480142147 || 1691690([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_4x4_tiling_fnctions.txt download]) || 225([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_4x4_equal_tiling.txt download])||
 ||diamond||(1,1)|| 15|| x|| x||
-
-
-
+||diamond||(2,2)|| 15|| x|| x||
+||diamond||(3,3)|| 15|| x|| x||
+||diamond||(4,4)|| 15|| x|| x||
 
 
 == Details ==
