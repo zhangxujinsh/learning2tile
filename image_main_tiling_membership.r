@@ -1,7 +1,7 @@
 source("code/tiling_lib.r")
 source("code/bow_lib.r")
 
-resolution <- read.table(paste("data",FILE.SEPERATOR,"frame.info",sep=""))
+resolution <- read.table(paste("data",FILE.SEPERATOR,"frame.info",sep=""),colClasses = c("character", "numeric","numeric"))
 
 
 dir.create(TARGET_DIR)
