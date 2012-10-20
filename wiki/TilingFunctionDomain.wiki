@@ -1,6 +1,7 @@
 #Introducing the domain of the tiling functions
 
 
+||*Tiling Style*||*Parameters*||*#Partition*||*#Tiling Functions*||*#Equal Tiling*||
 
 
 
