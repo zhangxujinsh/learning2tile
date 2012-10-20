@@ -11,6 +11,15 @@
 ||diamond||(2,2)|| 15|| x|| x||
 ||diamond||(3,3)|| 15|| x|| x||
 ||diamond||(4,4)|| 15|| x|| x||
+||diamond||(5,4)|| 15|| x|| x||
+||hexagon||1|| 15|| x|| x||
+||hexagon||1.5|| 15|| x|| x||
+||hexagon||2|| 15|| x|| x||
+||hexagon||2.5|| 15|| x|| x||
+||hexagon||3|| 15|| x|| x||
+||hexagon||3.5|| 15|| x|| x||
+||hexagon||4|| 15|| x|| x||
+
 
 
 == Details ==
