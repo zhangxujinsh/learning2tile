@@ -22,7 +22,9 @@ RandomSplitBackup <- function(labelfile, ncopy = 10) {
 }
 
 
-RandomSplit <- function(labelfile, ncopy = 10) {
+RandomSplit <- function(labelfile, ncopy = 10, multilabel.balance=FALSE) {
+	#multilabel.balance for a multiclass classification whether ensure each class has at least 50% training data
+	#constrcting a dataset with more training data
 	d = as.vector(read.table(labelfile))
 	labs <- list()
 	classes <- c()
@@ -42,22 +44,43 @@ RandomSplit <- function(labelfile, ncopy = 10) {
 		}
 	}
 	
-	
-	for(i in 1:ncopy) {
-		result =  replicate(nrow(d),-1)
-		#sample each class
-		for(j in classes) {
-			population = which(bin_matrix[,j]==1)
-			trids <- population[sample(1:length(population), ceiling(length(population)/2))]
-			tsids <- setdiff(population,trids)
-			result[trids] = 0
-			result[tsids] = 1
+	if(multilabel.balance) {
+		for(i in 1:ncopy) {
+			result =  replicate(nrow(d),-1)
+			#sample each class
+			for(j in classes) {
+				population = which(bin_matrix[,j]==1)
+				samplesize = ceiling(length(population)/2)
+				population = intersect(population,which(result!=0))
+				trids <- population[sample(1:length(population), min(samplesize,length(population)))]
+				tsids <- setdiff(population,trids)
+				result[trids] = 0
+				result[tsids] = 1
+			}
+			partation = d
+			partation[,2] = result
+			write(t(partation), file = paste("partation",i,".par",sep=""), ncol = 2)
 		}
-		partation = d
-		partation[,2] = result
-		write(t(partation), file = paste("partation",i,".par",sep=""), ncol = 2)
+	} else {
+		for(i in 1:ncopy) {
+			result =  replicate(nrow(d),-1)
+			#sample each class
+			for(j in classes) {
+				population = which(bin_matrix[,j]==1)
+				trids <- population[sample(1:length(population), ceiling(length(population)*0.5))]
+				tsids <- setdiff(population,trids)
+				result[trids] = 0
+				result[tsids] = 1
+			}
+			partation = d
+			partation[,2] = result
+			write(t(partation), file = paste("partation",i,".par",sep=""), ncol = 2)
+		}
 	}
+	
+	
 }
+
 
 
 unassemble <- function(str.label) {
