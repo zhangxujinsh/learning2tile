@@ -6,7 +6,7 @@ To generate all possible tiling for a base screen use the following method:
 
 
 ||*Tiling Style*||*Method*||
-||rectangle|| public void generateRectangleTiling(int column, int row, File neighborfile, File outdir)||
+||rectangle|| <code language="java"> public void generateRectangleTiling(int column, int row, File neighborfile, File outdir) </code>||
 ||diamond|| public void generateDiamondTiling(int u, int v, File neighborfile, File outdir)||
 ||hexagon|| public void generateHexagonTiling(double u, File neighborfile, File outdir)||
 ||ellipse|| public void generateEllipseTiling(int u, File neighborfile, File outdir)||
