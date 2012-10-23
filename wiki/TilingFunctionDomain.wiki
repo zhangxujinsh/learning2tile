@@ -17,7 +17,7 @@ It requires the tiling parameters and a neighbor file indicating the adjacent ti
 For example we want to generate all tiling functions for the diamond (ellipse=1) base screen.
 [http://learning2tile.googlecode.com/svn/wiki/images/1_ellipse_id.png]
 
-We should provide a neighbor file (named ellipse_1_neighbors.txt) looks like this:
+We should provide a neighbor file [http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse_1_neighbors.txt link] looks like this:
 {{{
 0 1,2,3,4
 1 0,2,4
@@ -26,10 +26,14 @@ We should provide a neighbor file (named ellipse_1_neighbors.txt) looks like thi
 4 0,1,3
 }}}
 And then we call the function
-<code language="java"> generateEllipseTiling(1, new File("ellipse_1_neighbors.txt), new File("G:\\tilingfun"))</code>
-Then three files will be generated in the G:\tilingfun folder.
-
-
+<code language="java">
+URL url = new URL("http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse_1_neighbors.txt");
+generateEllipseTiling(1, new File("ellipse_1_neighbors.txt), new File("G:\\tilingfun"))
+</code>
+Then three files will be generated in the *G:\tilingfun* folder.
+#partition functions
+#tiling functions
+#equal tiling functions
 
 
 == Summary == 
