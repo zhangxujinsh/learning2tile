@@ -13,17 +13,11 @@
 ||diamond||(4,4)|| 27644437|| 22944([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_4x4_tiling_fnctions.txt download])|| 2([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_4x4_equal_tiling.txt download])||([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_4x4_neighbors.txt download])||
 ||diamond||(5,4)|| 682076806159|| -|| 70([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_5x4_equal_tiling.txt download])||([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_5x4_neighbors.txt download])||
 
+||hexagon||1|| 15|| x|| x||x||
+||hexagon||1.5|| 15|| x|| x||x||
+||hexagon||2|| 15|| x|| x||x||
+||hexagon||2.5|| 15|| x|| x||x||
 
-||diamond||(2,2)|| 15|| x|| x||
-||diamond||(3,3)|| 15|| x|| x||
-||diamond||(4,4)|| 15|| x|| x||
-||diamond||(5,4)|| 15|| x|| x||
-||hexagon||1|| 15|| x|| x||
-||hexagon||1.5|| 15|| x|| x||
-||hexagon||2|| 15|| x|| x||
-||hexagon||2.5|| 15|| x|| x||
-||hexagon||3|| 15|| x|| x||
-||hexagon||3.5|| 15|| x|| x||
 
 
 
