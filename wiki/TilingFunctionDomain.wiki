@@ -2,14 +2,14 @@
 
 == Exploring Tiling Space ==
 
-To generate all possible tiling for a base screen use the following method. Considering the run-time performance all code here is implemented in Java instead of R (though we do provide an [http://www.r-project.org/ R] version)
+To generate all possible tiling for a base screen use the following method. Considering the run-time performance all code here is implemented in Java instead of R (though we do provide an [http://www.r-project.org/ R] version).
 
 
 ||*Tiling Style*||*Method*||
 ||rectangle|| <code language="java"> public void generateRectangleTiling(int column, int row, File neighborfile, File outdir) </code>||
-||diamond|| public void generateDiamondTiling(int u, int v, File neighborfile, File outdir)||
-||hexagon|| public void generateHexagonTiling(double u, File neighborfile, File outdir)||
-||ellipse|| public void generateEllipseTiling(int u, File neighborfile, File outdir)||
+||diamond|| <code language="java"> public void generateDiamondTiling(int u, int v, File neighborfile, File outdir)</code>||
+||hexagon|| <code language="java"> public void generateHexagonTiling(double u, File neighborfile, File outdir)</code>||
+||ellipse|| <code language="java"> public void generateEllipseTiling(int u, File neighborfile, File outdir)</code>||
 
 
 
