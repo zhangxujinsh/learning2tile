@@ -16,9 +16,13 @@
 ||hexagon||1.5|| 4140([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/hexagon_1.5_partition.txt download])|| 466([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/hexagon_1.5_tiling_fnctions.txt download])|| 7([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/hexagon_1.5_equal_tiling.txt download])||([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/hexagon_1.5_neighbors.txt download])||
 ||hexagon||2|| 2764437|| 78268([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/hexagon_2.0_tiling_fnctions.txt download])|| 2([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/hexagon_2.0_equal_tiling.txt download])||([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/hexagon_2_neighbors.txt download])||
 
+||ellipse||1|| 52([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse1_partition.txt download])|| 466([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse1_tiling_fnctions.txt download])|| 7([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse1_equal_tiling.txt download]) ||([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse_1_neighbors.txt download])||
 
-||hexagon||1.5|| 4140|| 466|| 7 ||x||
-||hexagon||2|| 2764437|| 78268|| 2||x||
+
+
+
+||ellipse||4|| 4140|| 78268|| 2||([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse_4_neighbors.txt download])||
+||ellipse||8|| 4213597|| 78268|| 2||([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse_8_neighbors.txt download])||
 
 
 
