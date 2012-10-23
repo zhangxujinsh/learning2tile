@@ -16,6 +16,7 @@ It requires the tiling parameters and a neighbor file indicating the adjacent ti
 == Example ==
 For example we want to generate all tiling functions for the diamond (ellipse=1) base screen.
 [http://learning2tile.googlecode.com/svn/wiki/images/1_ellipse_id.png]
+
 We should provide a neighbor file (named ellipse_1_neighbors.txt) looks like this:
 {{{
 0 1,2,3,4
