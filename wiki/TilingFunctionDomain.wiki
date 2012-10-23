@@ -10,6 +10,7 @@
 ||diamond||(1,1)|| 15([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_1x1_partition.txt download])|| 12([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_1x1_tiling_fnctions.txt download])|| 4([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_1x1_equal_tiling.txt download])||([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_1x1_neighbors.txt download])||
 ||diamond||(2,2)|| 52([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_2x2_partition.txt download])|| 16([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_2x2_tiling_fnctions.txt download])|| 2([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_2x2_equal_tiling.txt download])||([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_2x2_neighbors.txt download])||
 ||diamond||(3,3)|| 4213597|| 17326([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_3x3_tiling_fnctions.txt download])|| 23([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_3x3_equal_tiling.txt download])||([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_3x3_neighbors.txt download])||
+||diamond||(4,4)|| 27644437|| 22944([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_4x4_tiling_fnctions.txt download])|| 2([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_4x4_equal_tiling.txt download])||([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/diamond_4x4_neighbors.txt download])||
 
 
 
