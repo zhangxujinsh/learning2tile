@@ -27,12 +27,14 @@ We should provide a neighbor file [http://learning2tile.googlecode.com/svn/wiki/
 }}}
 And then we call the function
 <code language="java">
-URL url = new URL("http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse_1_neighbors.txt");
 generateEllipseTiling(1, new File("ellipse_1_neighbors.txt), new File("G:\\tilingfun"))
 </code>
 Then three files will be generated in the *G:\tilingfun* folder.
+
 #partition functions
+
 #tiling functions
+
 #equal tiling functions
 
 
