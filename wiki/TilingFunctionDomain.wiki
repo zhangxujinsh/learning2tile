@@ -1,5 +1,10 @@
 #Introducing the domain of the tiling functions
 
+== Exploring Tiling Space ==
+
+
+
+== Table == 
 
 ||*Tiling Style*||*Parameters*||*#Partition*||*#Tiling Functions*||*#Equal Tiling*||*Neighbor File* ||
 ||rectangle||(2,2)|| 15 ([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_2x2_partition.txt download])||12 ([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_2x2_tiling_fnctions.txt download])||4 ([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_2x2_equal_tiling.txt download])||([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_2x2.neighbors.txt download])||
