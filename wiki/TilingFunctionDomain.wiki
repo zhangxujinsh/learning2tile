@@ -11,8 +11,11 @@ To generate all possible tiling for a base screen use the following method. Cons
 ||hexagon|| <code language="java"> public void generateHexagonTiling(double u, File neighborfile, File outdir)</code>||
 ||ellipse|| <code language="java"> public void generateEllipseTiling(int u, File neighborfile, File outdir)</code>||
 
+It requires the tiling parameters and a neighbor file indicating the adjacent tiles for each tiles.
 
-It requires a neighbor file indicating the adjacent tiles for each tiles. For example:
+== Example ==
+For example we want to generate all tiling functions for the diamond (ellipse=1) base screen.
+[http://learning2tile.googlecode.com/svn/wiki/images/1_ellipse_id.png]
 
 
 == Table == 
