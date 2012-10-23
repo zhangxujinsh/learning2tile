@@ -31,11 +31,11 @@ generateEllipseTiling(1, new File("ellipse_1_neighbors.txt), new File("G:\\tilin
 </code>
 Then three files will be generated in the *G:\tilingfun* folder.
 
-# partition functions
+  * partition functions
 
-# tiling functions
+  * tiling functions
 
-# equal tiling functions
+  * equal tiling functions
 
 
 == Summary == 
