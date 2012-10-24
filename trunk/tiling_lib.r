@@ -385,8 +385,12 @@ TilingEllipse <- function(u=5, txyc_matrix, width, height) {
 	
 	
 	region.all$tiles[[1]] <- ellipse.area[[1]]
-	for(i in 2:u) {
-		region.all$tiles[[i]] <- setdiff(ellipse.area[[i]], ellipse.area[[i-1]])
+	if(u >= 2) {
+		for(i in 2:u) {
+			region.all$tiles[[i]] <- setdiff(ellipse.area[[i]], ellipse.area[[i-1]])
+		}
+	} else {
+		region.all$tiles[[1]] <- ellipse.area[[i]]
 	}
 	region.all$tiles[[u+1]] <- setdiff(intersect(which(f1>0),which(f2<0)),ellipse.area[[u]])
 	region.all$tiles[[u+2]] <- setdiff(intersect(which(f1>0),which(f2>0)),ellipse.area[[u]])
