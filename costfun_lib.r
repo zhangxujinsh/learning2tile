@@ -74,6 +74,14 @@ FitnessAllClasses <- function(pos.hist.list, dim) {
 	return(fitness)
 }
 
+OutputFitness <- function(fitness, tilingfuns, outfile) {
+	tiling_names <- vector(mode="character", lengt=nrow(tilingfuns))
+	for(i in 1:nrow(tilingfuns)) {
+		tiling_names[i] = TilingMembership2String(tilingfuns[i,])
+	}
+	write(t(cbind(tiling_names,fitness)), file = outfile, ncol=2)
+}
+
 
 FindBestFSTiling <- function(spbow.list, partations, label.binary, tiling.functions, dim=1024) {
 	foldnum <- length(partations)
