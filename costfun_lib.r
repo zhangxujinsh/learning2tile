@@ -160,15 +160,15 @@ GenTilingReport <- function(tiling_functions, fitness, tiling_style=NULL, tiling
 		
 		textplot(info, show.rownames = FALSE)
 		textplot(report, show.rownames = FALSE)
-		txyc_matrix = as.matrix(expand.grid(1:300,1:200))
+		txyc_matrix = as.matrix(expand.grid(1:150,1:100))
 		if(tiling_style == "square") {
-			base.screen <- TilingRectangle(tiling_paras[1],tiling_paras[2], txyc_matrix, 300, 200)
+			base.screen <- TilingRectangle(tiling_paras[1],tiling_paras[2], txyc_matrix, 150, 100)
 		} else if(tiling_style == "diamond") {
-			base.screen <- TilingDiamond(tiling_paras[1],tiling_paras[2], txyc_matrix, 300, 200)
+			base.screen <- TilingDiamond(tiling_paras[1],tiling_paras[2], txyc_matrix, 150, 100)
 		} else if(tiling_style == "camera") {
-			base.screen <- TilingCamera(tiling_paras, txyc_matrix, 300, 200)
+			base.screen <- TilingCamera(tiling_paras, txyc_matrix, 150, 100)
 		} else if(tiling_style == "hexagon") {
-			base.screen <- TilingHexagon(tiling_paras, txyc_matrix, 300, 200)
+			base.screen <- TilingHexagon(tiling_paras, txyc_matrix, 150, 100)
 		}
 		
 		#draw each tiling
