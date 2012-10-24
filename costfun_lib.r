@@ -86,7 +86,6 @@ OutputFitness <- function(fitness, tilingfuns, outfile) {
 FindBestFSTiling <- function(spbow.list, partations, label.binary, tiling.functions, dim=1024) {
 	foldnum <- length(partations)
 	fitness = vector(mode="numeric", length=nrow(tiling.functions))
-	
 	for(i in 1:foldnum) {
 		tr.spbow.list <- list()
 		tr.ids <- which(partations[[i]][,2]==0)
@@ -169,6 +168,8 @@ GenTilingReport <- function(tiling_functions, fitness, tiling_style=NULL, tiling
 			base.screen <- TilingCamera(tiling_paras, txyc_matrix, 150, 100)
 		} else if(tiling_style == "hexagon") {
 			base.screen <- TilingHexagon(tiling_paras, txyc_matrix, 150, 100)
+		} else if(tiling_style == "ellipse") {
+			base.screen <- TilingEllipse(tiling_paras, txyc_matrix, 150, 100)
 		}
 		
 		#draw each tiling
