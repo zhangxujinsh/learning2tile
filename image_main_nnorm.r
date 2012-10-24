@@ -33,7 +33,8 @@ images.txyc.location <- as.matrix(read.table(WORKING_DIR))
 if(TILING_STYLE == "square") {
 	final.bow.dim <- TILING_PARA[1]*TILING_PARA[2]*DIM
 } else if(TILING_STYLE == "diamond") {
-	final.bow.dim <- (TILING_PARA[1]+1)*(TILING_PARA[2]+1)*DIM
+	region.all <- TilingDiamond(TILING_PARA[1],TILING_PARA[2], c(), 500, 333)
+	final.bow.dim<- length(region.all$tiles)*DIM
 } else if(TILING_STYLE == "hexagon") {
 	#projecting to the universal screen with
 	#width = 555
@@ -42,6 +43,8 @@ if(TILING_STYLE == "square") {
 	final.bow.dim<- length(region.all$tiles)*DIM
 } else if(TILING_STYLE == "camera") {
 	final.bow.dim <- 5*DIM
+} else if(TILING_STYLE == "ellipse") {
+	final.bow.dim  <- (TILING_PARA+4)*DIM
 } else {
 	print("Unkown Tiling Style! Please check it again.")
 	quit()
@@ -89,6 +92,8 @@ for(i in 1:length(images.txyc.location)) {
 	} else if(TILING_STYLE == "hexagon") {
 		ptxyc_matrix <- Project2AUniformSize(txyc_matrix, owidth=width, oheight=height, pwidth = 500, pheight = 333)
 		region.all <- TilingHexagon(TILING_PARA, txyc_matrix, 500, 333)
+	} else if(TILING_STYLE == "ellipse") {
+		region.all <- TilingCamera(TILING_PARA, txyc_matrix, width, height)
 	}
 
 	
