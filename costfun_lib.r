@@ -74,6 +74,30 @@ FitnessAllClasses <- function(pos.hist.list, dim) {
 	return(fitness)
 }
 
+
+FitnessClassSpecific <- function(pos.hist.list, dim) {
+	#a list of positive hisgram for each class
+	numofclasses <- length(pos.hist.list)
+	hist.length <- length(pos.hist.list[[1]])
+	fitness <- vector(mode="numeric", length=numofclasses)
+	
+	for(i in 1:numofclasses) {
+		#for each class
+		this.class.posspow <- pos.hist.list[[i]]
+		#approximation for the real value of negspbow for the sake of efficiency
+		this.class.negspow <- vector(length=hist.length , mode = "numeric")
+		for(j in setdiff(1:numofclasses,i)) {
+			this.class.negspow = this.class.negspow + pos.hist.list[[j]]
+		}
+		#norm
+		this.class.posspow = this.class.posspow
+		this.class.negspow = this.class.negspow / (numofclasses-1)
+		
+		fitness[i] = FitnessClass(this.class.posspow, this.class.negspow, dim)
+	}
+	return(fitness)
+}
+
 OutputFitness <- function(fitness, tilingfuns, outfile) {
 	tiling_names <- vector(mode="character", lengt=nrow(tilingfuns))
 	for(i in 1:nrow(tilingfuns)) {
@@ -83,7 +107,7 @@ OutputFitness <- function(fitness, tilingfuns, outfile) {
 }
 
 
-FindBestFSTiling <- function(spbow.list, partations, label.binary, tiling.functions, dim=1024) {
+FindBestFSTiling <- function(spbow.list, partations, label.binary, tiling.functions, lambda = 0.0, dim=1024) {
 	foldnum <- length(partations)
 	fitness = vector(mode="numeric", length=nrow(tiling.functions))
 	for(i in 1:foldnum) {
@@ -105,8 +129,41 @@ FindBestFSTiling <- function(spbow.list, partations, label.binary, tiling.functi
 		}
 	}
 	fitness = fitness/foldnum
+	numoftiles = apply(tiling.functions,1,max)+1
+	fitness = fitness - numoftiles*lambda
 	return(fitness)
 }
+
+
+FindBestCSTiling  <- function(spbow.list, partations, label.binary, tiling.functions, lambda = 0.0, dim=1024) {
+	foldnum <- length(partations)
+	fitness = matrix(0, nrow = nrow(tiling.functions), ncol = ncol(label.binary))
+	
+	for(i in 1:foldnum) {
+		tr.spbow.list <- list()
+		tr.ids <- which(partations[[i]][,2]==0)
+		for(j in 1:length(tr.ids)) {
+			tr.spbow.list[[j]] = spbow.list[[tr.ids[j]]]
+		}
+		
+		#for each partation
+		label.hist <- GetLabelHist(tr.spbow.list,label.binary[tr.ids,])
+		
+		for(k in 1:nrow(tiling.functions)) {
+			transformed.spbow <- list()
+			for(i in 1:length(label.hist)) {
+				transformed.spbow[[i]] = TransformSpbow(label.hist[[i]],tiling.functions[k,],"null",dim) 
+			}
+			fitness[k,] = fitness[k,] + FitnessClassSpecific(transformed.spbow,dim)
+		}
+	}
+	fitness = fitness/foldnum
+	numoftiles = apply(tiling.functions,1,max)+1
+	fitness = fitness - numoftiles*lambda
+	return(fitness)
+}
+
+
 
 
 ToBinaryLabel <- function(l) {
@@ -131,7 +188,7 @@ unassemble <- function(str.label) {
 	return(as.numeric(strsplit(str.label,",")[[1]]))
 }
 
-GenTilingReport <- function(tiling_functions, fitness, tiling_style=NULL, tiling_paras=NULL, save.filename=NULL) {
+GenTilingReport <- function(tiling_functions, fitness, tiling_style=NULL, tiling_paras=NULL, lambda =0.0, save.filename=NULL) {
 	numtiles = apply(tiling_functions,1,max)+1		#number of the tiles
 	report = matrix(nrow = length(unique(numtiles)), ncol = 3)
 	
@@ -148,14 +205,15 @@ GenTilingReport <- function(tiling_functions, fitness, tiling_style=NULL, tiling
 	colnames(report) <-  c("tiling", "num_of_tiles", "fitness")
 	if(!is.null(save.filename)) {
 		pdf(save.filename)
-		info <- matrix(nrow=6)
+		info <- matrix(nrow=7)
 		colnames(info) <- "https://code.google.com/p/learning2tile/"
 		info[1,] = "################################################################"
 		info[2,] = "Configuration Information:"
 		info[3,] = paste("TILING_STYLE =",tiling_style)
 		info[4,] = paste("TILING_PARA =", paste(tiling_paras, collapse=" ", sep = " "))
-		info[5,] = "See the following page for the learnt tiling functions"
-		info[6,] = "################################################################"
+		info[5,] = paste("Lambda =", lambda)
+		info[6,] = "See the following page for the learnt tiling functions"
+		info[7,] = "################################################################"
 		
 		textplot(info, show.rownames = FALSE)
 		textplot(report, show.rownames = FALSE)
@@ -186,6 +244,83 @@ GenTilingReport <- function(tiling_functions, fitness, tiling_style=NULL, tiling
 }
 
 
+
+GenClassSpecificReport <- function(tiling_functions, fitness, tiling_style=NULL, tiling_paras=NULL, lambda =0.0, save.filename=NULL) {
+
+	report = matrix(0, nrow = ncol(fitness), ncol = 3)
+	
+	
+	for(i in 1:nrow(report)) {
+		#browser()
+		fitness.maxid = which(fitness[,i]==max(fitness[,i]))[1]
+		report[i,1] = i
+		report[i,2] = TilingMembership2String(tiling_functions[fitness.maxid,])
+		report[i,3] = fitness[fitness.maxid,i]
+	}
+	colnames(report) <-  c("Class", "tiling_funs", "fitness")
+	
+	if(!is.null(save.filename)) {
+		pdf(save.filename)
+		info <- matrix(nrow=7)
+		colnames(info) <- "https://code.google.com/p/learning2tile/"
+		info[1,] = "################################################################"
+		info[2,] = "Configuration Information:"
+		info[3,] = paste("TILING_STYLE =",tiling_style)
+		info[4,] = paste("TILING_PARA =", paste(tiling_paras, collapse=" ", sep = " "))
+		info[5,] = paste("Lambda =", lambda)
+		info[6,] = "See the following page for the learnt tiling functions"
+		info[7,] = "################################################################"
+		
+		textplot(info, show.rownames = FALSE)
+		
+		for(i in 1:nrow(report)) {
+			#browser()
+			fitness.maxid = which(fitness[,i]==max(fitness[,i]))
+			report[i,1] = i
+			report[i,2] = TilingMembership2String(tiling_functions[fitness.maxid,])
+			report[i,3] = fitness[fitness.maxid,i]
+		}	
+		colnames(report) <-  c("Event", "tiling_funs", "fitness")
+		textplot(report, show.rownames = FALSE)
+		title("Best Class Specific Tiling Summary")
+		
+		unique.tiling <- unique(report[,2])
+		unique.tiling.table <- matrix(nrow=length(unique.tiling), ncol=2)
+		for(i in 1:nrow(unique.tiling.table)) {
+			unique.tiling.table[i,1] = unique.tiling[i]
+			this.event.ids = which(report[,2]==unique.tiling[i])
+			unique.tiling.table[i,2] = paste(this.event.ids, collapse=" ")
+		}
+		colnames(unique.tiling.table) = c("Unique tiling", "Classes")
+		textplot(unique.tiling.table , show.rownames = FALSE)
+		
+		
+		
+		txyc_matrix = as.matrix(expand.grid(1:150,1:100))
+		if(tiling_style == "square") {
+			base.screen <- TilingRectangle(tiling_paras[1],tiling_paras[2], txyc_matrix, 150, 100)
+		} else if(tiling_style == "diamond") {
+			base.screen <- TilingDiamond(tiling_paras[1],tiling_paras[2], txyc_matrix, 150, 100)
+		} else if(tiling_style == "camera") {
+			base.screen <- TilingCamera(tiling_paras, txyc_matrix, 150, 100)
+		} else if(tiling_style == "hexagon") {
+			base.screen <- TilingHexagon(tiling_paras, txyc_matrix, 150, 100)
+		} else if(tiling_style == "ellipse") {
+			base.screen <- TilingEllipse(tiling_paras, txyc_matrix, 150, 100)
+		}
+		
+		#draw each tiling
+		for(i in 1:nrow(report)) {
+			tiling_membership = String2TilingMembership(report[i,2])
+			mytiling = TilingMembership(base.screen, tiling_membership)
+			PlotTiling(txyc_matrix, mytiling)
+			title(paste("Class",i,": ",report[i,2],sep=""))
+		}
+		dev.off()		
+	
+	}
+	return(report)
+}
 
 
 
