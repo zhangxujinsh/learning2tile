@@ -71,12 +71,12 @@ for(i in 1:length(images.txyc.location)) {
 	txyc_matrix = matrix(0,0,0)
 	#check whether the matrix file is empty?
 	if(file.info(images.txyc.location[i])$size <= 0)  {
-		write(final.bow, file=paste(FINAL_BOWDIR,basename(videos.dirs[i]),".spbow",sep=""), ncol=length(final.bow))
+		write(final.bow, file=paste(FINAL_BOWDIR,getVideoID(basename(images.txyc.location[i])),".spbow",sep=""), ncol=length(final.bow))
 		next		#empty file
 	}
 	txyc_matrix <- read.matrix(images.txyc.location[i])
 	if(nrow(txyc_matrix) == 0) {
-		write(final.bow, file=paste(FINAL_BOWDIR,basename(videos.dirs[i]),".spbow",sep=""), ncol=length(final.bow))
+		write(final.bow, file=paste(FINAL_BOWDIR,getVideoID(basename(images.txyc.location[i])),".spbow",sep=""), ncol=length(final.bow))
 		next									#empty matrix
 	}
 	
