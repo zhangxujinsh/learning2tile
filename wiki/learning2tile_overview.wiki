@@ -44,14 +44,11 @@ Download and install R from http://www.r-project.org/
     #load the label file
     label.table <- read.table("labels.labels")
     label.binmatrix <- ToBinaryLabel(label.table)
-
     #load the spbow (mask tilings)
     spbow.list = list()
-
     for(i in 1:nrow(label.table)) {
     	spbow.list[[i]] = as.vector(read.matrix(paste(spbowdir,     label.table[i,1],".spbow",sep="")))
     }
-
     #load the condidate tilings 
     tilingfuns <- read.matrix("http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rec    tangle_4x4_equal_tiling.txt")
     #compute the fitness (minus cost) for each candidate tiling
