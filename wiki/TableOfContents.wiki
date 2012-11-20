@@ -1,4 +1,4 @@
-Steps to learn to tile:
+*Learning to tile step by step*:
  * [Articles learning2tile_overview]
     * [ArticlesXSS Web security]
     * [ArticlesDom DOM manipulation]
