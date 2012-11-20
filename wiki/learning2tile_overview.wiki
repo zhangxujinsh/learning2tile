@@ -69,6 +69,7 @@ from 15 categories).
     
     </code>
   # Once finished, it will generates the report and print the running time for both I/O and learning process.
+   <iframe src="http://docs.google.com/viewer?url=http%3A%2F%2Fcode.google.com%2Fp%2Flearning2tile%2Fsource%2Fbrowse%2Fwiki%2Fdataset%2F15scene%2Frectangle_4x4_report.pdf&embedded=true" width="600" height="780" style="border: none;"></iframe>
 
 
 ==== On a Linux machine ====
