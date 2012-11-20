@@ -63,13 +63,13 @@ for(i in 1:nrow(label.table)) {
 }
 
 #load the condidate tilings 
-tilingfuns <- read.matrix("http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_3x3_equal_tiling.txt")
+tilingfuns <- read.matrix("http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_4x4_equal_tiling.txt")
 
 #compute the fitness (minus cost) for each candidate tiling
 fitness <- FindBestFSTiling(spbow.list, partations, label.binmatrix, tilingfuns, dim=DIM)
 
 #generate the final pdf report
-report <- GenTilingReport(tilingfuns,fitness, tiling_style = "square", tiling_paras=c(3,3), save.filename="rectangle_3x3_report.pdf")
+report <- GenTilingReport(tilingfuns,fitness, tiling_style = "square", tiling_paras=c(4,4), save.filename="rectangle_4x4_report.pdf")
 
 
 
