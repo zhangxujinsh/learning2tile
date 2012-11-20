@@ -1,8 +1,6 @@
 #labels Featured
 == User Guide ==
 
-#sidebar TableOfContents
-
 === 1) Install R ===
 
 Download and install R from http://www.r-project.org/
