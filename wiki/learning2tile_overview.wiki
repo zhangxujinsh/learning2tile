@@ -3,7 +3,7 @@
 
 == 1) Install R ==
 
-Add your content here.
+Download and install R from http://www.r-project.org/
 
 
 == Details ==
