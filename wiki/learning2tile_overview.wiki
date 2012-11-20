@@ -69,7 +69,7 @@ from 15 categories).
     
     </code>
   # Once finished, it will generates the report and print the running time for both I/O and learning process.
-    <wiki:gadget url="http://learning2tile.googlecode.com/svn/wiki/gadgets/embededviewer.xml" width="310" height="566" />
+    <wiki:gadget url="http://learning2tile.googlecode.com/svn/wiki/gadgets/embededviewer.xml" width="600" height="780" />
 
 
 
