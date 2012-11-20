@@ -1,4 +1,4 @@
-#TableOfContents
+Steps to learn to tile:
  * [Articles learning2tile_overview]
     * [ArticlesXSS Web security]
     * [ArticlesDom DOM manipulation]
