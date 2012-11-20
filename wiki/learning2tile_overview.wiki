@@ -68,8 +68,7 @@ from 15 categories).
     print(paste("Learning time : ", t3[1]-t2[1], "s", sep=""))
     
     </code>
-  # Once finished, it will generates the report and print the running time for both I/O and learning process.
-    <wiki:gadget url="http://learning2tile.googlecode.com/svn/wiki/gadgets/embededviewer.xml" width="600" height="780" />
+  # Once finished, it will generates [https://docs.google.com/viewer?url=http%3A%2F%2Flearning2tile.googlecode.com%2Fsvn%2Fwiki%2Fdataset%2F15scene%2Frectangle_4x4_report.pdf "the report"] and print the running time for both I/O and learning process.
 
 
 
