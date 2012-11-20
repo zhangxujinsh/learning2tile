@@ -5,6 +5,11 @@
 
 Download and install R from http://www.r-project.org/
 
+=== 2) Download the source archive ==
+
+Download the archieve here from [here http://code.google.com/p/learning2tile/downloads/detail?name=learning2tile_v1.0_example.zip&can=2&q=#makechanges]
+
+
 
 === Details ===
 
