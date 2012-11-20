@@ -18,7 +18,12 @@ Download and install R from http://www.r-project.org/
 
 ==== On a Windows machine ====
   # Double click the file ".RData"
-  # 
+  # Type the command and follow the instructions to download the dependent libraries.
+   <code language="R">
+   install.packages("gplots")
+   require(Matrix)
+require(tseries)
+   </code>
 
 
 ==== On a Linux machine ====
