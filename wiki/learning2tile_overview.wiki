@@ -39,9 +39,8 @@ Download and install R from http://www.r-project.org/
     #load the cross validation partition
     partations <- list()
     for(i in 1:foldnum) {
-    	partations[[i]] <-                         read.table(paste("partation",i,".par",sep=""))
+    	partations[[i]] <- read.table(paste("partation",i,".par",sep=""))
     }
-
     #load the label file
     label.table <- read.table("labels.labels")
     label.binmatrix <- ToBinaryLabel(label.table)
