@@ -76,10 +76,9 @@ from 15 categories).
 ==== On a Linux machine ====
 
   # Open the R console, where "/data/MM2/workspace/R" is the folder where you installed R.
-  <code language="R">
+  {{{
   /data/MM2/workspace/R/bin/R
-  </code>
-
+  }}}
   # Double click the file ".RData".
 
 === Discussion ===
