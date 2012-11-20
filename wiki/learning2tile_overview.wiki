@@ -26,27 +26,27 @@ Download and install R from http://www.r-project.org/
     </code>
   # Type the command in the opened console.
     <code language="R">
-#load the source packages
-source("costfun_lib.r")
-source("tiling_lib.r")
-source("bow_lib.r")
+    #load the source packages
+    source("costfun_lib.r")
+    source("tiling_lib.r")
+    source("bow_lib.r")
 
 
-############ Mask = Rectangle_4x4 ####################
-spbowdir <- "rectangle_mask_4x4\\"
+    ############ Mask = Rectangle_4x4 ####################
+    spbowdir <- "rectangle_mask_4x4\\"
 
-#the fold number in cross validation
-foldnum = 5
+    #the fold number in cross validation
+    foldnum = 5
 
-#the number of centroids in clustering = the size of the vocabulary
-DIM=1024
+    #the number of centroids in clustering = the size of the vocabulary
+    DIM=1024
 
 
-#load the cross validation partition
-partations <- list()
-for(i in 1:foldnum) {
-	partations[[i]] <- read.table(paste("partation",i,".par",sep=""))
-}
+    #load the cross validation partition
+    partations <- list()
+    for(i in 1:foldnum) {
+    	partations[[i]] <-                         read.table(paste("partation",i,".par",sep=""))
+    }
 
 #load the label file
 label.table <- read.table("labels.labels")
@@ -55,21 +55,21 @@ label.binmatrix <- ToBinaryLabel(label.table)
 
 
 
-#load the spbow (mask tilings)
-spbow.list = list()
+    #load the spbow (mask tilings)
+    spbow.list = list()
 
-for(i in 1:nrow(label.table)) {
-	spbow.list[[i]] = as.vector(read.matrix(paste(spbowdir, label.table[i,1],".spbow",sep="")))
-}
+    for(i in 1:nrow(label.table)) {
+    	spbow.list[[i]] = as.vector(read.matrix(paste(spbowdir,     label.table[i,1],".spbow",sep="")))
+    }
 
-#load the condidate tilings 
-tilingfuns <- read.matrix("http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_4x4_equal_tiling.txt")
+    #load the condidate tilings 
+    tilingfuns <-     read.matrix("http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rec    tangle_4x4_equal_tiling.txt")
 
-#compute the fitness (minus cost) for each candidate tiling
-fitness <- FindBestFSTiling(spbow.list, partations, label.binmatrix, tilingfuns, dim=DIM)
+    #compute the fitness (minus cost) for each candidate tiling
+    fitness <- FindBestFSTiling(spbow.list, partations, label.binmatrix,     tilingfuns, dim=DIM)
 
-#generate the final pdf report
-report <- GenTilingReport(tilingfuns,fitness, tiling_style = "square", tiling_paras=c(4,4), save.filename="rectangle_4x4_report.pdf")
+    #generate the final pdf report
+    report <- GenTilingReport(tilingfuns,fitness, tiling_style = "square", tiling_paras=c(4,4), save.filename="rectangle_4x4_report.pdf")
     </code>
 
 ==== On a Linux machine ====
