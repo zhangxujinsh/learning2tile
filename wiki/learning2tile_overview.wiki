@@ -24,7 +24,54 @@ install.packages("gplots")
 install.packages("Matrix")
 install.packages("tseries")
 </code>
+  # Type the command to run the code.
+<code language="R">
+#load the source packages
+source("costfun_lib.r")
+source("tiling_lib.r")
+source("bow_lib.r")
 
+
+############ Mask = Rectangle_3x3 ####################
+spbowdir <- "screen_rectangle_3x3\\"
+
+
+foldnum = 5			#the fold number in cross validation
+DIM=1024			#the number of centroids in clustering = the size of the vocabulary =  the dimansion of the BoW in each tile
+
+
+#load the cross validation partition
+partations <- list()
+for(i in 1:foldnum) {
+	partations[[i]] <- read.table(paste("partation",i,".par",sep=""))
+}
+
+#load the label file
+label.table <- read.table("labels.labels")
+label.binmatrix <- ToBinaryLabel(label.table)
+
+
+
+
+#load the spbow (mask tilings)
+spbow.list = list()
+
+for(i in 1:nrow(label.table)) {
+	spbow.list[[i]] = as.vector(read.matrix(paste(spbowdir, label.table[i,1],".spbow",sep="")))
+}
+
+#load the condidate tilings 
+tilingfuns <- read.matrix("http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_3x3_equal_tiling.txt")
+
+#compute the fitness (minus cost) for each candidate tiling
+fitness <- FindBestFSTiling(spbow.list, partations, label.binmatrix, tilingfuns, dim=DIM)
+
+#generate the 
+report <- GenTilingReport(tilingfuns,fitness, tiling_style = "square", tiling_paras=c(3,3), save.filename="rectangle_3x3_report.pdf")
+
+
+
+</code>
 
 ==== On a Linux machine ====
 
