@@ -33,8 +33,8 @@ from 15 categories).
     source("bow_lib.r")
     ############ Mask = Rectangle_4x4 ####################
     spbowdir <- "rectangle_mask_4x4\\"
-    report_filename <- "rectangle_4x4_report.pdf"
-    para_lambda <- 0.0012
+    report_filename <- "rectangle_4x4_report.pdf"   #name of the final report
+    para_lambda <- 0.0012    #the regularization parameter in the cost function
     t1 <- proc.time()
     #the fold number in cross validation
     foldnum = 5
