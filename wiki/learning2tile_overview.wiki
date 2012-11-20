@@ -47,7 +47,7 @@ Download and install R from http://www.r-project.org/
     #load the spbow (mask tilings)
     spbow.list = list()
     for(i in 1:nrow(label.table)) {
-    	spbow.list[[i]] = as.vector(read.matrix(paste(spbowdir,     label.table[i,1],".spbow",sep="")))
+    	spbow.list[[i]] = as.vector(read.matrix(paste(spbowdir, label.table[i,1],".spbow",sep="")))
     }
     #load the condidate tilings 
     tilingfuns <- read.matrix("http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_4x4_equal_tiling.txt")
