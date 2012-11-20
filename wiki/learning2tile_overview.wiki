@@ -86,6 +86,8 @@ from 15 categories).
     <code language="R">
     setwd("/data/MM2/temp")
     </code>
+  # Same as STEP X on Windows.
+  # Same as STEP X on Windows.
 === Discussion ===
 
 Add your content here.  Format your content with:
