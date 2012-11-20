@@ -32,26 +32,19 @@ Download and install R from http://www.r-project.org/
     source("bow_lib.r")
     ############ Mask = Rectangle_4x4 ####################
     spbowdir <- "rectangle_mask_4x4\\"
-
     #the fold number in cross validation
     foldnum = 5
-
     #the number of centroids in clustering = the size of the vocabulary
     DIM=1024
-
-
     #load the cross validation partition
     partations <- list()
     for(i in 1:foldnum) {
     	partations[[i]] <-                         read.table(paste("partation",i,".par",sep=""))
     }
 
-#load the label file
-label.table <- read.table("labels.labels")
-label.binmatrix <- ToBinaryLabel(label.table)
-
-
-
+    #load the label file
+    label.table <- read.table("labels.labels")
+    label.binmatrix <- ToBinaryLabel(label.table)
 
     #load the spbow (mask tilings)
     spbow.list = list()
