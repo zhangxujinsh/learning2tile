@@ -30,7 +30,6 @@ Download and install R from http://www.r-project.org/
     source("costfun_lib.r")
     source("tiling_lib.r")
     source("bow_lib.r")
-
     ############ Mask = Rectangle_4x4 ####################
     spbowdir <- "rectangle_mask_4x4\\"
 
