@@ -1,5 +1,5 @@
-*Learning to tile step by step*:
- * [Articles learning2tile_overview]
+*Learning2tile step by step*:
+ * [learning2tile_overview]
     * [ArticlesXSS Web security]
     * [ArticlesDom DOM manipulation]
     * [ArticlesStyle CSS and style]
