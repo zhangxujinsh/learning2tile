@@ -21,8 +21,8 @@ Download and install R from http://www.r-project.org/
   # Type the command and follow the instructions to download the dependent libraries.
    <code language="R">
    install.packages("gplots")
-   require(Matrix)
-require(tseries)
+   install.packages("Matrix")
+   install.packages("tseries")
    </code>
 
 
