@@ -1,5 +1,5 @@
 #TableOfContents
- * [Articles HowToLearn learning2tile_overview]
+ * [Articles learning2tile_overview]
     * [ArticlesXSS Web security]
     * [ArticlesDom DOM manipulation]
     * [ArticlesStyle CSS and style]
