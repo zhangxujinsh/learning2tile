@@ -18,7 +18,7 @@ from 15 categories).
 === 3) Execute the code  ===
 
 ==== On a Windows machine ====
-  # Double click the file ".RData"
+  # Double click the file ".RData".
   # Type the command and follow the instructions to download the dependent libraries.
     <code language="R">
     install.packages("gplots")
