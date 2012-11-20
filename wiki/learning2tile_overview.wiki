@@ -60,7 +60,7 @@ from 15 categories).
     t3 <- proc.time()
     #generate the final pdf report
     report <- GenTilingReport(tilingfuns,fitness, tiling_style = "square", tiling_paras=c(4,4), save.filename=report_filename)
-    #print the information
+    #print the run-time information
     print(paste("Learning finished. Please find the learned tilings in ", report_filename, ".", sep=""))
     print(paste("Run time : ", t3-t1, sep=""))
     print(paste("I/O time : ", t2-t1, sep=""))
