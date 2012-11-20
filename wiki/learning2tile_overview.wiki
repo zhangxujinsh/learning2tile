@@ -20,9 +20,9 @@ Download and install R from http://www.r-project.org/
   # Double click the file ".RData"
   # Type the command and follow the instructions to download the dependent libraries.
   <code language="R">
-  install.packages("gplots")
-  install.packages("Matrix")
-  install.packages("tseries")
+  install.packages("gplots");
+  install.packages("Matrix");
+  install.packages("tseries");
   </code>
 
 
