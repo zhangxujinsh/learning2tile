@@ -9,7 +9,7 @@ Download and install R from http://www.r-project.org/
 
 === 2) Download the source archive ===
 
-  # Download the example archive here from [http://code.google.com/p/learning2tile/downloads/detail?name=learning2tile_v1.0_example.zip&can=2&q=#makechanges here] which comes with an example of 15 scene dataset (4,485 scene images
+  # Download the example archive here from [https://code.google.com/p/learning2tile/downloads/detail?name=learning2tile_v1.1_example.zip&can=2&q=#makechanges here] which comes with an example of 15 scene dataset (4,485 scene images
 from 15 categories).
   # Unzip the archive in a folder.
     * rectangle_mask_4x4 is the pre-computed mask file each for an image.
@@ -82,7 +82,7 @@ from 15 categories).
   {{{
   /data/MM2/workspace/R/bin/R
   }}}
-  # Change the directory where you unziped and stored the example archive [http://code.google.com/p/learning2tile/downloads/detail?name=learning2tile_v1.0_example.zip&can=2&q=#makechanges here]. Here say it is in "/data/MM2/temp".
+  # Change the directory where you unziped and stored the example archive [https://code.google.com/p/learning2tile/downloads/detail?name=learning2tile_v1.1_example.zip&can=2&q=#makechanges here]. Here say it is in "/data/MM2/temp".
   <code language="R">
   setwd("/data/MM2/temp")
   </code>
