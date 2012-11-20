@@ -9,9 +9,13 @@ Download and install R from http://www.r-project.org/
 
   # Download the example archive here from [http://code.google.com/p/learning2tile/downloads/detail?name=learning2tile_v1.0_example.zip&can=2&q=#makechanges here] which comes with an example of 15 scene dataset.
   # Unzip the archive in a folder.
+    * rectangle_mask_4x4 is the pre-computed mask file each for an image.
+    * The file name ending with ".r" and ".java" are source files
+    *  
 
 
-=== 2) Run the code  ===
+
+=== 3) Execute the code  ===
 
 
 
