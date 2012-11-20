@@ -34,6 +34,7 @@ from 15 categories).
     ############ Mask = Rectangle_4x4 ####################
     spbowdir <- "rectangle_mask_4x4\\"
     report_filename <- "rectangle_4x4_report.pdf"
+    para_lambda <- 0.0012
     t1 <- proc.time()
     #the fold number in cross validation
     foldnum = 5
@@ -56,10 +57,10 @@ from 15 categories).
     tilingfuns <- read.matrix("http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_4x4_equal_tiling.txt")
     t2 <- proc.time()
     #compute the fitness (minus cost) for each candidate tiling
-    fitness <- FindBestFSTiling(spbow.list, partations, label.binmatrix, tilingfuns, dim=DIM)
+    fitness <- FindBestFSTiling(spbow.list, partations, label.binmatrix, tilingfuns, dim=DIM, lambda = para_lambda)
     t3 <- proc.time()
     #generate the final pdf report
-    report <- GenTilingReport(tilingfuns,fitness, tiling_style = "square", tiling_paras=c(4,4), save.filename=report_filename)
+    report <- GenTilingReport(tilingfuns,fitness, tiling_style = "square", tiling_paras=c(4,4), save.filename=report_filename, lambda = para_lambda)
     #print the run-time information
     print(paste("Learning finished. Please find the learned tilings in ", report_filename, ".", sep=""))
     print(paste("Run time : ", t3[1]-t1[1], "s", sep=""))
