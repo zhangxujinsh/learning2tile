@@ -66,16 +66,12 @@ from 15 categories).
     print(paste("Run time : ", t3[1]-t1[1], "s", sep=""))
     print(paste("I/O time : ", t2[1]-t1[1], "s", sep=""))
     print(paste("Learning time : ", t3[1]-t2[1], "s", sep=""))
-    
     </code>
   # Once finished, it will generates a report [https://docs.google.com/viewer?url=http%3A%2F%2Flearning2tile.googlecode.com%2Fsvn%2Fwiki%2Fdataset%2F15scene%2Frectangle_4x4_report.pdf (preview_link)] and print the running time for both I/O and learning process.
     * The first page presents the configuration information of the task.
     * The second page lists the estimated promising tilings with different number of tiles. You may select the one with the maximum fitness score or try all of them.
     * In the following pages, the promising tilings are plotted with its name printed on the top.
-
-
-
-
+  # The learning to tile is finished and read here to see how to generate the final Spatial Bag-of-Word representation using the script.
 
 ==== On a Linux machine ====
 
