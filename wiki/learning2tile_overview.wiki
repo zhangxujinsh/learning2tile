@@ -25,7 +25,7 @@ Download and install R from http://www.r-project.org/
     install.packages("tseries")
     </code>
   # Type the command in the opened console.
-<code language="R">
+    <code language="R">
 #load the source packages
 source("costfun_lib.r")
 source("tiling_lib.r")
@@ -70,10 +70,7 @@ fitness <- FindBestFSTiling(spbow.list, partations, label.binmatrix, tilingfuns,
 
 #generate the final pdf report
 report <- GenTilingReport(tilingfuns,fitness, tiling_style = "square", tiling_paras=c(4,4), save.filename="rectangle_4x4_report.pdf")
-
-
-
-</code>
+    </code>
 
 ==== On a Linux machine ====
 
