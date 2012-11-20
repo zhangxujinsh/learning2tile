@@ -7,7 +7,8 @@ Download and install R from http://www.r-project.org/
 
 === 2) Download the source archive ==
 
-Download the example archieve here from [http://code.google.com/p/learning2tile/downloads/detail?name=learning2tile_v1.0_example.zip&can=2&q=#makechanges here] which comes with an example of 15 scene dataset.
+#Download the example archive here from [http://code.google.com/p/learning2tile/downloads/detail?name=learning2tile_v1.0_example.zip&can=2&q=#makechanges here] which comes with an example of 15 scene dataset.
+#Unzip the archive in a folder.
 
 
 
