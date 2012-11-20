@@ -71,7 +71,7 @@ from 15 categories).
   # Once finished, it will generates [https://docs.google.com/viewer?url=http%3A%2F%2Flearning2tile.googlecode.com%2Fsvn%2Fwiki%2Fdataset%2F15scene%2Frectangle_4x4_report.pdf "the report"] and print the running time for both I/O and learning process.
     * The first page presents the configuration information of the task.
     * The second page lists the estimated promising tilings ()
-
+{{{<iframe src="http://docs.google.com/viewer?url=http%3A%2F%2Flearning2tile.googlecode.com%2Fsvn%2Fwiki%2Fdataset%2F15scene%2Frectangle_4x4_report.pdf&embedded=true" width="600" height="780" style="border: none;"></iframe>}}}
 
 
 
