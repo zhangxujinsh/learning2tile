@@ -32,8 +32,8 @@ source("tiling_lib.r")
 source("bow_lib.r")
 
 
-############ Mask = Rectangle_3x3 ####################
-spbowdir <- "screen_rectangle_3x3\\"
+############ Mask = Rectangle_4x4 ####################
+spbowdir <- "screen_rectangle_4x4\\"
 
 #the fold number in cross validation
 foldnum = 5
