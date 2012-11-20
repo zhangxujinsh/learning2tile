@@ -35,9 +35,11 @@ source("bow_lib.r")
 ############ Mask = Rectangle_3x3 ####################
 spbowdir <- "screen_rectangle_3x3\\"
 
+#the fold number in cross validation
+foldnum = 5
 
-foldnum = 5			#the fold number in cross validation
-DIM=1024			#the number of centroids in clustering = the size of the vocabulary =  the dimansion of the BoW in each tile
+#the number of centroids in clustering = the size of the vocabulary
+DIM=1024
 
 
 #load the cross validation partition
@@ -66,7 +68,7 @@ tilingfuns <- read.matrix("http://learning2tile.googlecode.com/svn/wiki/tilingfu
 #compute the fitness (minus cost) for each candidate tiling
 fitness <- FindBestFSTiling(spbow.list, partations, label.binmatrix, tilingfuns, dim=DIM)
 
-#generate the 
+#generate the final pdf report
 report <- GenTilingReport(tilingfuns,fitness, tiling_style = "square", tiling_paras=c(3,3), save.filename="rectangle_3x3_report.pdf")
 
 
