@@ -20,13 +20,13 @@ Download and install R from http://www.r-project.org/
   # Double click the file ".RData"
   # Type the command and follow the instructions to download the dependent libraries.
     <code language="R">
-    install.packages("gplots")
-    install.packages("Matrix")
-    install.packages("tseries")
+      install.packages("gplots")
+      install.packages("Matrix")
+      install.packages("tseries")
     </code>
 
   # Type the command in the opened console.
-    <code language="R">
+<code language="R">
     #load the source packages
     source("costfun_lib.r")
     source("tiling_lib.r")
@@ -70,7 +70,7 @@ label.binmatrix <- ToBinaryLabel(label.table)
 
     #generate the final pdf report
     report <- GenTilingReport(tilingfuns,fitness, tiling_style = "square", tiling_paras=c(4,4), save.filename="rectangle_4x4_report.pdf")
-    </code>
+</code>
 
 ==== On a Linux machine ====
 
