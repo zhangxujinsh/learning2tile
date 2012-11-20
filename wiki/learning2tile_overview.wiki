@@ -33,7 +33,7 @@ source("bow_lib.r")
 
 
 ############ Mask = Rectangle_4x4 ####################
-spbowdir <- "screen_rectangle_4x4\\"
+spbowdir <- "rectangle_mask_4x4\\"
 
 #the fold number in cross validation
 foldnum = 5
