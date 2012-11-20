@@ -69,7 +69,20 @@ from 15 categories).
     
     </code>
   # Once finished, it will generates the report and print the running time for both I/O and learning process.
-   <iframe src="http://docs.google.com/viewer?url=http%3A%2F%2Fcode.google.com%2Fp%2Flearning2tile%2Fsource%2Fbrowse%2Fwiki%2Fdataset%2F15scene%2Frectangle_4x4_report.pdf&embedded=true" width="600" height="780" style="border: none;"></iframe>
+   <Module>
+<ModulePrefs title="Google Gadget to add iframe within Google Sites" title_url="http://sites.google.com/site/annuairevin/" height="900" width="800" scrolling="false" directory_title="Google Gadget to add iframe within Google Sites" description="Add Google Gadget within A Google Site page" screenshot="http://www.liens-du-vin.ch/_pic061/my_gadgets_thumb.png" thumbnail="http://www.liens-du-vin.ch/_pic061/my_gadgets_thumb.png" author="Philippe Chappuis" author_email="info+gadgetCSE@liens-du-vin.ch" author_affiliation="Google" author_location="Rolle Switzerland" author_link="http://www.liens-du-vin.ch" author_photo="http://www.liens-du-vin.ch/_pic02/gadget-author-photo.png" author_aboutme="An Engineer who likes to develop for the Net and tastes wines" author_quote="A chief is a man who assumes responsibility. He says "I was beaten" he does not say "My men were beaten" - Antoine de Saint-Exupery"></ModulePrefs>
+<UserPref name="File" display_name="File (*.htm)" required="true" default_value="http://viti-vino.blogspot.com"/>
+<UserPref name="Text" display_name="Text" required="true" default_value="Inserting a blog within a Site."/>
+<UserPref name="FHeight" display_name="Frame Height" required="true" default_value="600"/>
+<UserPref name="FWidth" display_name="Frame Width" required="true" default_value="728"/>
+<UserPref name="FScroll" display_name="Frame Scroll" required="true" default_value="yes"/>
+<UserPref name="ContainerCol" display_name="Container Color" required="true" default_value="#d1dae3"/>
+<Content type="html">
+<![CDATA[
+<style type="text/css"> body { background-color: __UP_ContainerCol__; padding: 0; margin:0; } iframe { overflow-x: auto; overflow-y: auto; } </style> <div id="my_frame"></div> <script type="text/javascript"> var prefs = new _IG_Prefs(__MODULE_ID__); var s_url = _trim(prefs.getString("File")); s_url = s_url.replace("'"," "); s_url = s_url.replace(" ","%20"); var s_tex = _trim(prefs.getString("Text")); s_tex=s_tex.replace("'"," "); var s_hei = _trim(prefs.getString("FHeight")); if (s_hei != parseInt(s_hei)){s_hei=100;}; var s_whi = _trim(prefs.getString("FWidth")); if (s_whi != parseInt(s_whi)){s_whi=100;}; var s_scr = _trim(prefs.getString("FScroll")); var html = "<iframe src='" + s_url + "' " + "frameborder='0' style='margin: auto; text-align: center;' allowtransparency='true' " + "width='" + s_whi + "' height='" + s_hei + "' scrolling='" + s_scr + "'>" + s_tex + "</iframe>"; _gel("my_frame").innerHTML=html; </script>
+]]>
+</Content>
+</Module>
 
 
 ==== On a Linux machine ====
