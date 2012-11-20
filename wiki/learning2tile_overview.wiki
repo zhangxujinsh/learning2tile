@@ -11,7 +11,8 @@ Download and install R from http://www.r-project.org/
   # Unzip the archive in a folder.
     * rectangle_mask_4x4 is the pre-computed mask file each for an image.
     * The file name ending with ".r" and ".java" are source files.
-    * 
+    * "labels.labels" is the class label file.
+    * "partition[1-5].par" are the training and test partition used in the cross validation. 
 
 
 
