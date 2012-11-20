@@ -32,8 +32,9 @@ from 15 categories).
     source("tiling_lib.r")
     source("bow_lib.r")
     ############ Mask = Rectangle_4x4 ####################
-    t1 <- proc.time()
     spbowdir <- "rectangle_mask_4x4\\"
+    report_filename <- "rectangle_4x4_report.pdf"
+    t1 <- proc.time()
     #the fold number in cross validation
     foldnum = 5
     #the number of centroids in clustering = the size of the vocabulary
@@ -58,8 +59,13 @@ from 15 categories).
     fitness <- FindBestFSTiling(spbow.list, partations, label.binmatrix, tilingfuns, dim=DIM)
     t3 <- proc.time()
     #generate the final pdf report
-    report <- GenTilingReport(tilingfuns,fitness, tiling_style = "square", tiling_paras=c(4,4), save.filename="rectangle_4x4_report.pdf")
+    report <- GenTilingReport(tilingfuns,fitness, tiling_style = "square", tiling_paras=c(4,4), save.filename=report_filename)
     #print the information
+    print(paste("Learning finished. Please find the learned tilings in ", report_filename, ".", sep=""))
+    print(paste("Run time : ", t3-t1, sep=""))
+    print(paste("I/O time : ", t2-t1, sep=""))
+    print(paste("Learning time : ", t3-t2, sep=""))
+    
     </code>
   # Once finished, it will generates the report and print the running time for both I/O and learning process.
 
