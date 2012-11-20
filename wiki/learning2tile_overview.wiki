@@ -1,5 +1,5 @@
 #labels Featured
-#Learning to tile guild for a developer.
+#Learning to tile guild.
 
 === 1) Install R ===
 
