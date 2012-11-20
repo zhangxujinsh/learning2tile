@@ -54,14 +54,12 @@ Download and install R from http://www.r-project.org/
     }
 
     #load the condidate tilings 
-    tilingfuns <-     read.matrix("http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rec    tangle_4x4_equal_tiling.txt")
-
+    tilingfuns <- read.matrix("http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rec    tangle_4x4_equal_tiling.txt")
     #compute the fitness (minus cost) for each candidate tiling
     fitness <- FindBestFSTiling(spbow.list, partations, label.binmatrix,     tilingfuns, dim=DIM)
-
     #generate the final pdf report
     report <- GenTilingReport(tilingfuns,fitness, tiling_style = "square", tiling_paras=c(4,4), save.filename="rectangle_4x4_report.pdf")
-</code>
+    </code>
 
 ==== On a Linux machine ====
 
