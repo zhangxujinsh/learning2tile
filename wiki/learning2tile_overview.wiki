@@ -24,13 +24,13 @@ Download and install R from http://www.r-project.org/
     install.packages("Matrix")
     install.packages("tseries")
     </code>
+
   # Type the command in the opened console.
     <code language="R">
     #load the source packages
     source("costfun_lib.r")
     source("tiling_lib.r")
     source("bow_lib.r")
-
 
     ############ Mask = Rectangle_4x4 ####################
     spbowdir <- "rectangle_mask_4x4\\"
