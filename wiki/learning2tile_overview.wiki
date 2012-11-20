@@ -56,7 +56,7 @@ Download and install R from http://www.r-project.org/
     #generate the final pdf report
     report <- GenTilingReport(tilingfuns,fitness, tiling_style = "square", tiling_paras=c(4,4), save.filename="rectangle_4x4_report.pdf")
     </code>
-    #Once finished, it will generates the report and print the running time for both I/O and learning process.
+  # Once finished, it will generates the report and print the running time for both I/O and learning process.
 
 
 ==== On a Linux machine ====
