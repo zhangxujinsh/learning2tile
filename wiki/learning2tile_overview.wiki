@@ -62,9 +62,9 @@ from 15 categories).
     report <- GenTilingReport(tilingfuns,fitness, tiling_style = "square", tiling_paras=c(4,4), save.filename=report_filename)
     #print the run-time information
     print(paste("Learning finished. Please find the learned tilings in ", report_filename, ".", sep=""))
-    print(paste("Run time : ", t3-t1, sep=""))
-    print(paste("I/O time : ", t2-t1, sep=""))
-    print(paste("Learning time : ", t3-t2, sep=""))
+    print(paste("Run time : ", t3[1]-t1[1], "s", sep=""))
+    print(paste("I/O time : ", t2[1]-t1[1], "s", sep=""))
+    print(paste("Learning time : ", t3[1]-t2[1], "s", sep=""))
     
     </code>
   # Once finished, it will generates the report and print the running time for both I/O and learning process.
