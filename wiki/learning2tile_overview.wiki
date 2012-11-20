@@ -4,8 +4,8 @@
 === 1) Install R ===
 
 Download and install R from http://www.r-project.org/
-  *For more information on Windows see http://cran.r-project.org/bin/windows/base/
-  *Ubuntu Linux see http://help.nceas.ucsb.edu/installing_r_on_ubuntu
+  * For more information on Windows see http://cran.r-project.org/bin/windows/base/
+  * Ubuntu Linux see http://help.nceas.ucsb.edu/installing_r_on_ubuntu
 
 === 2) Download the source archive ===
 
