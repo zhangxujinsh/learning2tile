@@ -14,12 +14,11 @@ Download and install R from http://www.r-project.org/
     * "labels.labels" is the class label file.
     * "partition[1-5].par" are the training and test partition used in the cross validation. 
 
-
-
 === 3) Execute the code  ===
 
 ==== On a Windows machine ====
-
+  # Double click the file ".RData"
+  # 
 
 
 ==== On a Linux machine ====
