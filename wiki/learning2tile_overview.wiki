@@ -9,7 +9,7 @@ Download and install R from http://www.r-project.org/
 
 === 2) Download the source archive ===
 
-  # Download the example archive here from [https://code.google.com/p/learning2tile/downloads/detail?name=learning2tile_v1.1_example.zip&can=2&q=#makechanges here] which comes with an example of 15 scene dataset (4,485 scene images
+  # Download the example archive from [https://code.google.com/p/learning2tile/downloads/detail?name=learning2tile_v1.1_example.zip&can=2&q=#makechanges here] which comes with an example of 15 scene dataset (4,485 scene images
 from 15 categories).
   # Unzip the archive in a folder.
     * rectangle_mask_4x4 is the pre-computed mask file each for an image.
@@ -20,7 +20,6 @@ from 15 categories).
 === 3) Execute the code  ===
 
 ==== On a Windows machine ====
-  # Unzip the example archive.
   # Double click the file ".RData".
   # Type the command and follow the instructions to download the dependent libraries.
     <code language="R">
