@@ -26,11 +26,11 @@ Pascal VOC challenge 2007 collection consists of 9,963 photographic images of na
 
 TRECVID SED 2011 consisting of the surveillance video recorded in London Gatwick Airport. Unlike the previous datasets, the cameras in the dataset are fixed but the scenes are very complex and noisy. We extract the Motion SIFT feature on the 2011 development set with the vocabulary size |V| =4096 and randomly sample some non-event using sliding window (window size equals to 60 frames) so that on average the negative samples are approximately 20 times of the positive samples. The standard metric Minimum Detection Cost Rate (Min DCR) is adopted as the primary criteria and the MAP as the secondary criteria.
 
-||*Mask*||*Tiling*||*Min NCR*||*MAP*||*Plot*||
+||*Mask*||*Tiling*||*Min DCR*||*MAP*||*Plot*||
 ||rectangle 4x4 || <0,0,0,0,0,0,1,1,0,0,1,1,1,1,1,1> || *87.0±1.1*|| *24.2±1.0* ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample1.png] ||
 ||diamond 5x4 || <0,0,0,1,0,0,2,1,1,0,2,2,1,1,2,2,1,2> || 89.8±0.5|| 21.8±0.7 ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample4.png] ||
-||hexagon 2 || <0,1,2,3,4,5,6,7,8,9,10,11,12> || 80.9±0.3|| 82.5±0.4||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample3.png] ||
-||rectangle 3x3 || <0,1,2,3,4,5,6,7,8,9,10,11> || 80.4±0.7|| 83.2±0.6 ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample2.png] ||
+||rectangle 3x3 || <0,1,2,0,1,2,0,1,2> || 91.6±0.4|| 20.7±0.3||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample3.png] ||
+||diamond 3x3 || <0,1,2,0,1,3,2,4,4,3,5,5> || 88.3±1.4|| 24.6±0.9 ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample2.png] ||
 
 == Discussion ==
 
