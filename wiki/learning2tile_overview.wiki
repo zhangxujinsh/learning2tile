@@ -82,9 +82,7 @@ from 15 categories).
   /data/MM2/workspace/R/bin/R
   }}}
   # Change the directory where you unziped and stored the example archive [https://code.google.com/p/learning2tile/downloads/detail?name=learning2tile_v1.1_example.zip&can=2&q=#makechanges here]. Here say it is in "/data/MM2/temp".
-  <code language="R">
-  setwd("/data/MM2/temp")
-  </code>
+  <code language="R">setwd("/data/MM2/temp")</code>
   # Same as STEP 3-6 on Windows.
 
 === Discussion ===
