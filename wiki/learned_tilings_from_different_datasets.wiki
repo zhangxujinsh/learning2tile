@@ -18,6 +18,10 @@ Fifteen scene dataset consists of 4,485 scene images from 15 categories.  we ext
 
 == Fifteen Scene ==
 
+
+
+== Discussion ==
+
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
