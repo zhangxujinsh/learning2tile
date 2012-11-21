@@ -1,8 +1,7 @@
-
 == Set up ==
 By the proposed method, some promising tilings learned from different datasets are listed here. The experimental setup is as follows: All experiments are repeated five times with different randomly generated training and test samples and $0% confidence interval of the performance is reported according to the mean and the standard derivation of all runs. In each run the samples are partitioned approximately equally in the training and test sets. A standard SVM classifier with Chi square kernel is adopted and the multi-class classification is conducted using the one-versus-all strategy. In each dataset, the performance is evaluated by the common criteria used in the literature and the MAP (Mean Average Precision).
 
-
+[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15_scene_0_1_0_2_3_1_4_2_5_3_6_4_7_5_6_8_7_8.emf]
 
 == Fifteen Scene ==
 
