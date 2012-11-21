@@ -1,5 +1,5 @@
 == Set Up ==
-By the proposed method, some promising tilings learned from different datasets are listed here. The experimental setup is as follows: All experiments are repeated five times with different randomly generated training and test samples and $0% confidence interval of the performance is reported according to the mean and the standard derivation of all runs. In each run the samples are partitioned approximately equally in the training and test sets. A standard SVM classifier with Chi square kernel is adopted and the multi-class classification is conducted using the one-versus-all strategy. In each dataset, the performance is evaluated by the common criteria used in the literature and the MAP (Mean Average Precision).
+By the proposed method, some promising tilings learned from different datasets are listed here. The experimental setup is as follows: All experiments are repeated five times with different randomly generated training and test samples and 90% confidence interval of the performance is reported according to the mean and the standard derivation of all runs. In each run the samples are partitioned approximately equally in the training and test sets. A standard SVM classifier with Chi square kernel is adopted and the multi-class classification is conducted using the one-versus-all strategy. In each dataset, the performance is evaluated by the common criteria used in the literature and the MAP (Mean Average Precision).
 
 
 
@@ -22,8 +22,9 @@ Pascal VOC challenge 2007 collection consists of 9,963 photographic images of na
 ||rectangle 4x4 || <0,1,1,2,0,3,4,2,5,3,4,6,5,7,7,6> || 50.6±0.5 ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/voc07_sample3.png] ||
 ||ellipse 1 || <0,1,2,3,4> || 50.3±0.5 ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/voc07_sample4.png] ||
 
-== Fifteen Scene ==
+== [http://www-nlpir.nist.gov/projects/tv2011/tv2011.html#sed TRECVID SED] ==
 
+TRECVID SED 2011 consisting of the surveillance video recorded in London Gatwick Airport. Unlike the previous datasets, the cameras in the dataset are fixed but the scenes are very complex and noisy. We extract the Motion SIFT feature on the 2011 development set with the vocabulary size |V| =4096 and randomly sample some non-event using sliding window (window size equals to 60 frames) so that on average the negative samples are approximately 20 times of the positive samples. The standard metric Minimum Detection Cost Rate (Min DCR) is adopted as the primary criteria and the MAP as the secondary criteria and both are averaged over 7 events in 2 cameras.
 
 
 == Discussion ==
