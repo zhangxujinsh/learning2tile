@@ -7,11 +7,11 @@ By the proposed method, some promising tilings learned from different datasets a
 
 Fifteen scene dataset consists of 4,485 scene images from 15 categories.  we extract dense SIFT with the vocabulary size |V| =1024 and adopt the multi-class classification accuracy as the major evaluation criteria and MAP as the secondary criteria.
 
-||*Rank*||*Mask*||*Tiling*||*Accuracy*||*MAP*||*Plot*||
-|| 1    ||diamond 3x3 || <0,1,2,3,4,5,6,7,8,9,10,11> || 82.4±0.4|| 85.5±0.4 ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample1.png] ||
-|| 2    ||diamond 3x3 || <0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16> || 81.4±0.4|| 84.3±0.5 ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample1.png] ||
-|| 1    ||diamond 3x3 || <0,1,2,3,4,5,6,7,8,9,10,11> || 82.4±0.4|| 85.5±0.4 ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample1.png] ||
-|| 1    ||diamond 3x3 || <0,1,2,3,4,5,6,7,8,9,10,11> || 82.4±0.4|| 85.5±0.4 ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample1.png] ||
+||*Mask*||*Tiling*||*Accuracy*||*MAP*||*Plot*||
+||diamond 3x3 || <0,1,2,3,4,5,6,7,8,9,10,11> || *82.4±0.4*|| *85.5±0.4* ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample1.png] ||
+||diamond 3x3 || <0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16> || 81.4±0.4|| 84.3±0.5 ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample1.png] ||
+||hexagon 2 || <0,1,2,3,4,5,6,7,8,9,10,11,12> || 80.9±0.3|| 82.5±0.4||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample1.png] ||
+||rectangle 3x3 || <0,1,2,3,4,5,6,7,8,9,10,11> || 80.4±0.7|| 83.2±0.6 ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample1.png] ||
 
 == Fifteen Scene ==
 
