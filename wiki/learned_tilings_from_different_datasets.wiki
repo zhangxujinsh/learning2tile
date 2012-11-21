@@ -7,6 +7,7 @@ By the proposed method, some promising tilings learned from different datasets a
 
 Fifteen scene dataset consists of 4,485 scene images from 15 categories.  we extract dense SIFT with the vocabulary size |V| =1024 and adopt the multi-class classification accuracy as the major evaluation criteria and MAP as the secondary criteria.
 
+||*Rank*||*Mask*||*Tiling*||*Accuracy*||*MAP*||*Plot*||
 
 
 = Details =
