@@ -1,6 +1,12 @@
-#This page introduces the learned tilings from different datasets.
 
-= Introduction =
+
+== Set up ==
+By the proposed method, some promising tilings learned from different datasets are listed here. The experimental setup is as follows: All experiments are repeated five times with different randomly generated training and test samples and $90\%$ confidence interval of the performance is reported according to the mean and the standard derivation of all runs. In each run the samples are partitioned approximately equally in the training and test sets. A standard SVM classifier with $\chi^2$ kernel is adopted and the multi-class classification is conducted using the one-versus-all strategy. In each dataset, the performance is evaluated by the common criteria used in the literature and the MAP (Mean Average Precision). To achieve a fair comparison with SPM, only equal tilings are learned. The run-time is evaluated on a single core Intel Core i7 CPU@2.8GHz with 4G memory. In the experiments, we try to answer the following questions:
+
+
+
+
+
 
 Add your content here.
 
