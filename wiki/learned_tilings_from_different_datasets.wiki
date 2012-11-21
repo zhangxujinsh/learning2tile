@@ -13,7 +13,9 @@ Fifteen scene dataset consists of 4,485 scene images from 15 categories.  we ext
 ||hexagon 2 || <0,1,2,3,4,5,6,7,8,9,10,11,12> || 80.9±0.3|| 82.5±0.4||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample3.png] ||
 ||rectangle 3x3 || <0,1,2,3,4,5,6,7,8,9,10,11> || 80.4±0.7|| 83.2±0.6 ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample2.png] ||
 
-== Pascal VOC ==
+== [http://pascallin.ecs.soton.ac.uk/challenges/VOC/ Pascal VOC] ==
+Pascal VOC challenge 2007 collection consists of 9,963 photographic images of natural objects from 20 predefined object classes, e.g. "cat", "aeroplane" and small objects like "bottle". Unlike the fifteen scene dataset, an image of VOC usually contains several objects. The experiments are conducted on the development set denoted "trainval" (5,011 images) provided by the challenge organizers. We extract SIFT feature with the vocabulary size |V| =1024 and adopt the interpolated MAP which is the standard evaluation criteria used in the challenge. For each class, the interpolated AP is the interpolated precision at 11 recall level [0,0.1,...,1].
+
 
 
 == Fifteen Scene ==
