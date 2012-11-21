@@ -1,14 +1,14 @@
 == Set up ==
 By the proposed method, some promising tilings learned from different datasets are listed here. The experimental setup is as follows: All experiments are repeated five times with different randomly generated training and test samples and $0% confidence interval of the performance is reported according to the mean and the standard derivation of all runs. In each run the samples are partitioned approximately equally in the training and test sets. A standard SVM classifier with Chi square kernel is adopted and the multi-class classification is conducted using the one-versus-all strategy. In each dataset, the performance is evaluated by the common criteria used in the literature and the MAP (Mean Average Precision).
 
-[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample1.png]
+
 
 == Fifteen Scene ==
 
 Fifteen scene dataset consists of 4,485 scene images from 15 categories.  we extract dense SIFT with the vocabulary size |V| =1024 and adopt the multi-class classification accuracy as the major evaluation criteria and MAP as the secondary criteria.
 
 ||*Rank*||*Mask*||*Tiling*||*Accuracy*||*MAP*||*Plot*||
-
+|| 1    ||diamond 3x3 || <0,1,2,3,4,5,6,7,8,9,10,11> || 82.4±0.4|| 85.5±0.4 ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample1.png] ||
 
 = Details =
 
