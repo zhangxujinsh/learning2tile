@@ -1,5 +1,5 @@
 *Learning2tile step by step*:
- * [learning2tile_overview How to learn?]
+ * [learning2tile_overview Getting started]
  * [TilingFunction What's a tiling?]
  * [TilingMembership What's a mask?]
  * [TilingFunctionDomain How many tilings?]
