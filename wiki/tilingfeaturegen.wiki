@@ -6,10 +6,15 @@ This article introduces the guild to generate the spatial BoW feature for a tili
 Suppose we generate this report (see for how to generate it) and we find that <> is the promising tiling.
 
 == 2) Set the environment variables (Optional) ==
-Suppose we installed R at "C:\Program Files\R\R-2.15.2\bin" on Windows, we add this variable to the "Path". See http://www.divms.uiowa.edu/help/windows/RPackage.html
+Suppose we installed R at "C:\Program Files\R\R-2.15.2\bin" on Windows, we add this variable to the "Path". 
+
+See http://www.divms.uiowa.edu/help/windows/RPackage.html
 
 On Linux suppose the R home directory is "/data/MM2/R/bin", type
-{{{export PATH=${PATH}:/data/MM2/R/bi}}}. See http://www.cyberciti.biz/faq/set-environment-variable-linux/
+
+{{{export PATH=${PATH}:/data/MM2/R/bi}}}. 
+
+See http://www.cyberciti.biz/faq/set-environment-variable-linux/
 
 == 3) 
 
