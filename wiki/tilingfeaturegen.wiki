@@ -2,6 +2,10 @@
 
 This article introduces the guild to generate the spatial BoW feature for a tiling.
 
+== 1) Find a optimal tiling ==
+Suppose we generate this report (see for how to generate it) and we find that <> is the promising tiling.
+
+== 2) Download the package ==
 
 
 
