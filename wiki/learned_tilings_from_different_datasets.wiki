@@ -11,7 +11,7 @@ Fifteen scene dataset consists of 4,485 scene images from 15 categories.  we ext
 ||diamond 3x3 || <0,1,2,3,4,5,6,7,8,9,10,11> || *82.4±0.4*|| *85.5±0.4* ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample1.png] ||
 ||diamond 5x4 || <0,1,0,2,3,1,4,2,5,3,6,4,7,5,6,8,7,8> || 80.8±0.5|| 83.7±0.5 ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample4.png] ||
 ||hexagon 2 || <0,1,2,3,4,5,6,7,8,9,10,11,12> || 80.9±0.3|| 82.5±0.4||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample3.png] ||
-||rectangle 3x3 || <0,1,2,3,4,5,6,7,8,9,10,11> || 80.4±0.7|| 83.2±0.6 ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample2.png] ||
+||rectangle 3x3 || <0,1,2,0,1,2,0,1,2> || 80.4±0.7|| 83.2±0.6 ||[https://learning2tile.googlecode.com/svn/wiki/images/promising_tilings/15scene_sample2.png] ||
 
 == [http://pascallin.ecs.soton.ac.uk/challenges/VOC/ Pascal VOC] ==
 Pascal VOC challenge 2007 collection consists of 9,963 photographic images of natural objects from 20 predefined object classes, e.g. "cat", "aeroplane" and small objects like "bottle". Unlike the fifteen scene dataset, an image of VOC usually contains several objects. The experiments are conducted on the development set denoted "trainval" (5,011 images) provided by the challenge organizers. We extract SIFT feature with the vocabulary size |V| =1024 and adopt the interpolated MAP which is the standard evaluation criteria used in the challenge. For each class, the interpolated AP is the interpolated precision at 11 recall level [0,0.1,...,1].
