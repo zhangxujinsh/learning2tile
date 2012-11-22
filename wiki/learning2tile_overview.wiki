@@ -1,5 +1,6 @@
 #labels Featured
 == User Guide ==
+This article introduces how to use the code to learn promising tilings from a dataset.
 
 === 1) Install R ===
 
