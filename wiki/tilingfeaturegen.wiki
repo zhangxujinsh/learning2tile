@@ -5,10 +5,16 @@ This article introduces the guild to generate the spatial BoW feature for a tili
 == 1) Find a optimal tiling ==
 Suppose we generate this report (see for how to generate it) and we find that <> is the promising tiling.
 
-== 2) Download the package ==
+== 2) Download the package (Optional) ==
+Set the environment variables. Suppose we installed []
 
+On Windows set "C:\Program Files\R\R-2.15.2\bin" to the "Path" 
 
+for help see http://cran.r-project.org/bin/windows/base/rw-FAQ.html#How-do-I-set-environment-variables_003f
 
+On Linux see 
+
+== 3) 
 
 
 
