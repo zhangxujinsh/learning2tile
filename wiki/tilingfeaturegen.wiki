@@ -12,7 +12,9 @@ See http://www.divms.uiowa.edu/help/windows/RPackage.html
 
 On Linux suppose the R home directory is "/data/MM2/R/bin", type
 
-{{{export PATH=${PATH}:/data/MM2/R/bi}}}. 
+{{{
+export PATH=${PATH}:/data/MM2/R/bin
+}}} 
 
 See http://www.cyberciti.biz/faq/set-environment-variable-linux/
 
