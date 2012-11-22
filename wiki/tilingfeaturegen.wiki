@@ -28,7 +28,7 @@ See [http://www.cyberciti.biz/faq/set-environment-variable-linux/ here] for more
        28 7 768 203 771 527 477 634 968 847 641 963
        34 7 914 587 120 442 520 714 403 483 569 401
       }}}
-    Each row corresponds to a interest point and the first two dimension denotes the point's (x,y) coordinates. The following 10 dimensions list the top 10 nearest centroid IDs (centroid ID starting from 0).
+   Each row corresponds to a interest point and the first two dimension denotes the point's (x,y) coordinates. The following 10 dimensions list the top 10 nearest centroid IDs (centroid ID starting from 0).
     * The files in the code folder are the source code.
     * "labels.labels" is the class label file.
     * "partition[1-5].par" are the training and test partitions used in the cross validation.
