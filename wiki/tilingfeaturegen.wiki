@@ -1,6 +1,12 @@
-== Introduction ==
+== User Guild ==
 
-Add your content here.
+This article introduces the guild to generate the spatial BoW feature for a tiling.
+
+
+
+
+
+
 
 
 == Discussion ==
