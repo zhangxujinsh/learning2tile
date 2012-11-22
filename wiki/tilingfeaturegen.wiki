@@ -18,7 +18,7 @@ export PATH=${PATH}:/data/MM2/R/bin
 
 See [http://www.cyberciti.biz/faq/set-environment-variable-linux/ here] for more information.
 
-== 3) 
+== 3) Download the source package ==
 
 
 
