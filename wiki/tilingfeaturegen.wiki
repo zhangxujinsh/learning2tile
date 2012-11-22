@@ -33,7 +33,31 @@ See [http://www.cyberciti.biz/faq/set-environment-variable-linux/ here] for more
     * "labels.labels" is the class label file.
     * "partition[1-5].par" are the training and test partitions used in the cross validation.
 
+== 3) Config the Experiment ==
 
+args <- commandArgs(TRUE)
+
+if(length(args) != 1) {
+	print("Usage: spatialBoW EXP_ID")
+	print("  EXP_ID is a string indicating the experiment.")
+	print("  Set the parameters inside the r source file.")
+	quit()
+}
+if(Sys.info()["sysname"] == "Windows") {
+	FILE.SEPERATOR = "\\"
+} else {
+	FILE.SEPERATOR = "/"
+}
+
+EXP_ID = as.character(args[1])
+WORKING_DIR = "data/txyc512.list"	
+TARGET_DIR = paste("/data/MM2/lujiang/learning2tile/15scene/dexps",FILE.SEPERATOR, EXP_ID,sep="")
+DIM = 512
+TILING_STYLE = "square"
+TILING_PARA = c(1,1)
+SOFTMEMBERSHIP_PARA = c(1,0,0,0,0,0,0,0,0,0)
+
+source("code/image_main.r")
 
 
 == Discussion ==
