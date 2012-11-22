@@ -8,7 +8,7 @@ Suppose we generate this report (see for how to generate it) and we find that <>
 == 2) Set the environment variables (Optional) ==
 Suppose we installed R at "C:\Program Files\R\R-2.15.2\bin" on Windows, we add this variable to the "Path". 
 
-See http://www.divms.uiowa.edu/help/windows/RPackage.html
+See [http://www.divms.uiowa.edu/help/windows/RPackage.html here] for more information.
 
 On Linux suppose the R home directory is "/data/MM2/R/bin", type
 
@@ -16,7 +16,7 @@ On Linux suppose the R home directory is "/data/MM2/R/bin", type
 export PATH=${PATH}:/data/MM2/R/bin
 }}} 
 
-See http://www.cyberciti.biz/faq/set-environment-variable-linux/
+See [http://www.cyberciti.biz/faq/set-environment-variable-linux/ here] for more information.
 
 == 3) 
 
