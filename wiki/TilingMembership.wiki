@@ -1,4 +1,6 @@
-#Introducing Tiling Membership.
+== Tiling Definition ==
+the way to partition an image is called a tiling which determines the approach to encode the spatial information of the image.
+
 
 == Tile ID ==
 Each tile in the base screen has an unique integer ID starting from 0. Different types of base screen (e.g. rectangle and diamond) has the ID assignment pattern. To see the tile ID for a base screen using the following command:
