@@ -59,7 +59,6 @@ We summarize some tiling functions in the following table:
 ||ellipse||1|| 52([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse1_partition.txt download])|| 43([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse1_tiling_fnctions.txt download])|| 2([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse1_equal_tiling.txt download]) ||([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse_1_neighbors.txt download])||
 ||ellipse||4|| 4140([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse4_partition.txt download])|| 344([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse4_tiling_fnctions.txt download])|| 5([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse4_equal_tiling.txt download]) ||([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse_4_neighbors.txt download])||
 ||ellipse||8|| 4213597|| 5504([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse8_tiling_fnctions.txt download])|| 10([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse8_equal_tiling.txt download]) ||([http://learning2tile.googlecode.com/svn/wiki/tilingfuns/ellipse_8_neighbors.txt download])||
-||ellipse||x|| x|| x||x||x||
 
 
 
