@@ -1,7 +1,7 @@
 == Tiling Definition ==
 the way to partition an image is called a tiling which determines the approach to encode the spatial information of the image.
 
-The number of possible tilings is huge(see [TilingFunctionDomain]). Here we list all possible of equal tilings generated from 3x3 and 4x4 rectangle. 
+The number of possible tilings is huge(see [here for details TilingFunctionDomain]). Here we list all possible of equal tilings generated from 3x3 and 4x4 rectangle. 
 
 == Tile ID ==
 Each tile in a tiling has an unique integer ID starting from 0. To see the tile ID for different types of tilings using the following command:
