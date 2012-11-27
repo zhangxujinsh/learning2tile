@@ -1,7 +1,7 @@
 == Tiling Definition ==
 the way to partition an image is called a tiling which determines the approach to encode the spatial information of the image.
 
-The number of possible tilings is huge(see [TilingFunctionDomain]). *Here we list all possible of equal tilings generated from 3x3 and 4x4 rectangle mask*.
+*Here we list all possible of equal tilings generated from 3x3 and 4x4 rectangle mask*. The number of possible tilings is huge(see [TilingFunctionDomain]).
 
 <code language="R">
 tilingfuns <- read.matrix("http://learning2tile.googlecode.com/svn/wiki/tilingfuns/rectangle_4x4_equal_tiling.txt")
@@ -9,11 +9,11 @@ pdf("4x4_rectangle_all_equal_tiling.pdf")
 txyc_matrix = as.matrix(expand.grid(1:150,1:100))
 base.screen <- TilingRectangle(4,4, txyc_matrix, 150, 100)
 for(i in 1:nrow(tilingfuns)) {
-			tiling_membership = tilingfuns[i,]
-			mytiling = TilingMembership(base.screen, tiling_membership)
-			PlotTiling(txyc_matrix, mytiling)
-			title(TilingMembership2String(tilingfuns[i,]))
-		}
+  tiling_membership = tilingfuns[i,]
+  mytiling = TilingMembership(base.screen, tiling_membership)
+  PlotTiling(txyc_matrix, mytiling)
+  title(TilingMembership2String(tilingfuns[i,]))
+}
 dev.off()
 </code>
 
