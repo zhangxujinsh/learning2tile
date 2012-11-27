@@ -3,5 +3,5 @@
  * [TilingMembership What's a tiling?]
  * [TilingFunction What's a mask?]
  * [TilingFunctionDomain How many tilings?]
- * [ArticlesStyle How to generate features?]
+ * [tilingfeaturegen How to generate features?]
  * [learned_tilings_from_different_datasets Promising tiling learned]
