@@ -1,7 +1,7 @@
 *Learning2tile step by step*:
  * [learning2tile_overview Getting started]
- * [TilingFunction What's a tiling?]
- * [TilingMembership What's a mask?]
+ * [TilingMembership What's a tiling?]
+ * [TilingFunction What's a mask?]
  * [TilingFunctionDomain How many tilings?]
  * [ArticlesStyle How to generate features?]
  * [learned_tilings_from_different_datasets Promising tiling learned]
