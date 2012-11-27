@@ -1,7 +1,7 @@
 == Tiling Definition ==
 the way to partition an image is called a tiling which determines the approach to encode the spatial information of the image.
 
-*Here we list all possible of tilings [https://learning2tile.googlecode.com/svn/wiki/images/3x3_rectangle_all_equal_tiling.pdf download here] generated from 2x2 rectangle mask and all possible equal tilings generated from 3x3 [https://learning2tile.googlecode.com/svn/wiki/images/3x3_rectangle_all_equal_tiling.pdf here] and 4x4 [https://learning2tile.googlecode.com/svn/wiki/images/4x4_rectangle_all_equal_tiling.pdf here]rectangle mask*.(see [TilingFunctionDomain] for details). 
+*Here we list all possible of tilings [https://learning2tile.googlecode.com/svn/wiki/images/3x3_rectangle_all_equal_tiling.pdf download here] generated from 2x2 rectangle mask and all possible equal tilings generated from 3x3 [https://learning2tile.googlecode.com/svn/wiki/images/3x3_rectangle_all_equal_tiling.pdf download here] and 4x4 [https://learning2tile.googlecode.com/svn/wiki/images/4x4_rectangle_all_equal_tiling.pdf download here] rectangle mask*.(see [TilingFunctionDomain] for details). 
 
 The code used to generate the above pdf document is as follows:
 
