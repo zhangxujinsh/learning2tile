@@ -1,12 +1,8 @@
-#Introducing Tiling functions.
-
-The following txyc matrix is use in the following tiling function
-<code language="R">txyc_matrix = as.matrix(expand.grid(1:500,1:333))</code>
-
+== Definition ==
+a mask (or tiling mask) is a tiling from which more complicated tilings are derived by combining the tiles in it. Any tiling can be a mask.  However,we ﬁnd the types of tilings illustrated below are good candidates of masks. Note that a mask is also associated with a parameter controlling its complexity. In this following we introduce four types of masks namely, rectangle, diamond, hexagon and ellipse masks.
 
 == Rectangle ==
-
-To generate the a tiling by rectangle call *TilingRectangle*,
+To generate the a rectangle mask call *TilingRectangle*,
 
 *TilingRectangle <- function(u, v, txyc_matrix, width, height)
 
@@ -16,6 +12,7 @@ where u is the number of rectangle in each row and v is the number in each colum
 
 <code language="R">
 source("tiling_lib.r")
+txyc_matrix = as.matrix(expand.grid(1:500,1:333))
 t = TilingRectangle(3,3, txyc_matrix, 500, 333)
 PlotTiling(txyc_matrix, t)
 </code>
