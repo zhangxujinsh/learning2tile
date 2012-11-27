@@ -3,7 +3,7 @@ the way to partition an image is called a tiling which determines the approach t
 
 
 == Tile ID ==
-Each tile in the base screen has an unique integer ID starting from 0. Different types of base screen (e.g. rectangle and diamond) has the ID assignment pattern. To see the tile ID for a base screen using the following command:
+Each tile in a tiling has an unique integer ID starting from 0. To see the tile ID for different types of tilings using the following command:
 <code language="R">
 txyc_matrix = as.matrix(expand.grid(1:500,1:333))
 base_tiling = TilingRectangle(4,4, txyc_matrix, 500, 333) #generate the base screen
