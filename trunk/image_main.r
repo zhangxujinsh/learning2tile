@@ -88,12 +88,12 @@ for(i in 1:length(images.txyc.location)) {
 		region.all <- TilingRectangle(TILING_PARA[1],TILING_PARA[2], txyc_matrix, width, height)
 	} else if(TILING_STYLE == "diamond") {
 		ptxyc_matrix <- Project2AUniformSize(txyc_matrix, owidth=width, oheight=height, pwidth = 500, pheight = 333)
-		region.all <- TilingDiamond(TILING_PARA[1],TILING_PARA[2], txyc_matrix, 500, 333)
+		region.all <- TilingDiamond(TILING_PARA[1],TILING_PARA[2], ptxyc_matrix, 500, 333)
 	} else if(TILING_STYLE == "camera") {
 		region.all <- TilingCamera(TILING_PARA, txyc_matrix, width, height)
 	} else if(TILING_STYLE == "hexagon") {
 		ptxyc_matrix <- Project2AUniformSize(txyc_matrix, owidth=width, oheight=height, pwidth = 500, pheight = 333)
-		region.all <- TilingHexagon(TILING_PARA, txyc_matrix, 500, 333)
+		region.all <- TilingHexagon(TILING_PARA, ptxyc_matrix, 500, 333)
 	} else if(TILING_STYLE == "ellipse") {
 		region.all <- TilingEllipse(TILING_PARA, txyc_matrix, width, height)
 	}
