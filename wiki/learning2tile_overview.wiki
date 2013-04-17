@@ -31,9 +31,9 @@ from 15 categories).
   # Type the command in the opened console.
     <code language="R">
     #load the source packages
-    source("costfun_lib.r")
-    source("tiling_lib.r")
-    source("bow_lib.r")
+    source("http://learning2tile.googlecode.com/svn/trunk/costfun_lib.r")
+    source("http://learning2tile.googlecode.com/svn/trunk/tiling_lib.r")
+    source("http://learning2tile.googlecode.com/svn/trunk/bow_lib.r")
     ############ Mask = Rectangle_4x4 ####################
     spbowdir <- "rectangle_mask_4x4\\"
     report_filename <- "rectangle_4x4_report.pdf"   #name of the final report
