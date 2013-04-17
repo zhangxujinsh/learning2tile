@@ -11,7 +11,7 @@ where u is the number of rectangle in each row and v is the number in each colum
 ===Examples===
 
 <code language="R">
-source("tiling_lib.r")
+source("https://code.google.com/p/learning2tile/source/browse/trunk/tiling_lib.r")
 txyc_matrix = as.matrix(expand.grid(1:500,1:333))
 t = TilingRectangle(3,3, txyc_matrix, 500, 333)
 PlotTiling(txyc_matrix, t)
