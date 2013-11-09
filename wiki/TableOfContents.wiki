@@ -4,4 +4,3 @@
  * [TilingFunction What's a mask?]
  * [TilingFunctionDomain How many tilings?]
  * [tilingfeaturegen How to generate features?]
- * [learned_tilings_from_different_datasets Promising tiling learned]
