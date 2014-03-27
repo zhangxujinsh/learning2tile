@@ -84,6 +84,8 @@ from 15 categories).
     <code language="R">setwd("/data/MM2/temp")</code>
   # Same as STEP 3-6 on Windows.
 
+*Note the results are learned tilings from the given mask. The fusion of them yields the best results.*
+
 === Discussion ===
 
 Add your content here.  Format your content with:
