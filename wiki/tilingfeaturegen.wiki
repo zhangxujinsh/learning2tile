@@ -31,8 +31,7 @@ See [http://www.cyberciti.biz/faq/set-environment-variable-linux/ here] for more
      Each row corresponds to a interest point and the first two dimension denotes the point's (x,y) coordinates. The following 10 dimensions list the top 10 nearest centroid IDs (centroid ID starting from 0).
     * The files in the code folder are the source code.
     * "labels.labels" is the class label file.
-    * "partition[1-5].par" are the training and test partitions used in the cross validation.
-
+   
 == 3) Config the experiment ==
 <code language="R">
 
