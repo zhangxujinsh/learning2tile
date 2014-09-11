@@ -12,7 +12,7 @@ Download and install R from http://www.r-project.org/
 
   # Download the example archive from [https://code.google.com/p/learning2tile/downloads/detail?name=learning2tile_v1.1_example.zip&can=2&q=#makechanges here] which comes with a toy example.
 
-  *Note this only contains the feature for illustration, not the features used in our experiments.*
+*Note this only contains the feature for illustration, not the features used in our experiments.*
 
   # Unzip the archive in a folder.
     * rectangle_mask_4x4 is the pre-computed mask file each for an image.
