@@ -11,14 +11,13 @@ Download and install R from http://www.r-project.org/
 === 2) Download the source archive ===
 
   # Download the example archive from [https://code.google.com/p/learning2tile/downloads/detail?name=learning2tile_v1.1_example.zip&can=2&q=#makechanges here] which comes with a toy example.
-
-*Note this only contains the feature for illustration, not the features used in our experiments.*
-
   # Unzip the archive in a folder.
     * rectangle_mask_4x4 is the pre-computed mask file each for an image.
     * The file name ending with ".r" and ".java" are source files.
     * "labels.labels" is the class label file.
     * "partition[1-5].par" are the training and test partition used in the cross validation.
+
+*Note this only contains the feature for illustration, not the features used in our experiments.*
 
 === 3) Execute the code  ===
 
