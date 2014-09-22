@@ -1,9 +1,8 @@
 == User Guild ==
-[under construction]
 This article introduces the guild to generate the spatial BoW feature for a tiling.
 
 == 1) Find an optimal tiling ==
-Suppose we generate this report (see for how to generate it) and we find that <> is the promising tiling.
+Suppose we generate this report (see for how to generate it) and we find a particular tiling is the promising tiling.
 
 == 2) Set the environment variables (Optional) ==
 Suppose we installed R at "C:\Program Files\R\R-2.15.2\bin" on Windows, we add this variable to the "Path". 
