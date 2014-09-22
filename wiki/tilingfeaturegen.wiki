@@ -1,5 +1,5 @@
 == User Guild ==
-
+[under construction]
 This article introduces the guild to generate the spatial BoW feature for a tiling.
 
 == 1) Find an optimal tiling ==
