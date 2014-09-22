@@ -17,7 +17,7 @@ export PATH=${PATH}:/data/MM2/R/bin
 
 See [http://www.cyberciti.biz/faq/set-environment-variable-linux/ here] for more information.
 
-== 3) Download the source package ==
+== 3) Download the package ==
  # Unzip the archive in a folder:
     * a txyc file is the mapping file from centroids to each interest  point's SIFT features. Every image has a txyc file. For example "HVC7.txyc" looks like
       {{{
