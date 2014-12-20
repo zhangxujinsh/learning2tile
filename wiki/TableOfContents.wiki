@@ -3,4 +3,3 @@
  * [TilingMembership What's a tiling?]
  * [TilingFunction What's a mask?]
  * [TilingFunctionDomain How many tilings?]
- * [tilingfeaturegen How to generate features?]
